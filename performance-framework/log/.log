@@ -1,0 +1,413 @@
+TypeError: undefined is not a function
+    at Client.httpRequest (e:\performance-framework\node_modules\dena-client\op-client\lib\client.js:139:9)
+    at getUserInfo (evalmachine.<anonymous>:60:19)
+    at timer._onTimeout (timers.js:232:16)
+    at Timer.listOnTimeout (timers.js:119:15)Error: connect ETIMEDOUT
+    at exports._errnoException (util.js:746:11)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1012:19)Error: socket hang up
+    at createHangUpError (_http_client.js:215:15)
+    at Socket.socketCloseListener (_http_client.js:247:23)
+    at Socket.emit (events.js:129:20)
+    at TCP.close (net.js:484:11)ReferenceError: options is not defined
+    at Client.httpRequest (e:\performance-framework\node_modules\dena-client\op-client\lib\client.js:151:41)
+    at getUserInfo (evalmachine.<anonymous>:60:19)
+    at timer._onTimeout (timers.js:232:16)
+    at Timer.listOnTimeout (timers.js:119:15)ReferenceError: options is not defined
+    at Request.<anonymous> (e:\performance-framework\node_modules\dena-client\op-client\lib\client.js:147:45)
+    at Request.emit (events.js:107:17)
+    at Request.onRequestError (e:\performance-framework\node_modules\dena-client\op-client\node_modules\request\request.js:1025:8)
+    at ClientRequest.emit (events.js:107:17)
+    at Socket.socketErrorListener (_http_client.js:271:9)
+    at Socket.emit (events.js:107:17)
+    at net.js:459:14
+    at process._tickCallback (node.js:355:11)ReferenceError: options is not defined
+    at Request.<anonymous> (e:\performance-framework\node_modules\dena-client\op-client\lib\client.js:147:45)
+    at Request.emit (events.js:107:17)
+    at Request.onRequestError (e:\performance-framework\node_modules\dena-client\op-client\node_modules\request\request.js:1025:8)
+    at ClientRequest.emit (events.js:107:17)
+    at Socket.socketCloseListener (_http_client.js:247:9)
+    at Socket.emit (events.js:129:20)
+    at TCP.close (net.js:484:11)ReferenceError: callback is not defined
+    at IncomingMessage.<anonymous> (e:\performance-framework\node_modules\dena-client\op-client\lib\client.js:135:21)
+    at IncomingMessage.emit (events.js:129:20)
+    at _stream_readable.js:908:16
+    at process._tickCallback (node.js:355:11)ReferenceError: callback is not defined
+    at IncomingMessage.<anonymous> (e:\performance-framework\node_modules\dena-client\op-client\lib\client.js:135:21)
+    at IncomingMessage.emit (events.js:129:20)
+    at _stream_readable.js:908:16
+    at process._tickCallback (node.js:355:11)SyntaxError: Unexpected token N
+    at Object.parse (native)
+    at Client.parseBuffer (e:\performance-framework\node_modules\dena-client\op-client\lib\client.js:102:25)
+    at IncomingMessage.<anonymous> (e:\performance-framework\node_modules\dena-client\op-client\lib\client.js:141:33)
+    at IncomingMessage.emit (events.js:129:20)
+    at _stream_readable.js:908:16
+    at process._tickCallback (node.js:355:11)TypeError: Arguments to path.join must be strings
+    at Object.win32.join (path.js:233:13)
+    at new Actor (e:\performance-framework\node_modules\dena-robot\lib\agent\actor.js:20:44)
+    at Object.Agent.run (e:\performance-framework\node_modules\dena-robot\lib\agent\agent.js:96:25)
+    at Socket.<anonymous> (e:\performance-framework\node_modules\dena-robot\lib\agent\agent.js:73:19)
+    at Socket.Emitter.emit (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-emitter\index.js:134:20)
+    at Socket.onevent (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\socket.js:254:10)
+    at Socket.onpacket (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\socket.js:212:12)
+    at Manager.<anonymous> (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-bind\index.js:21:15)
+    at Manager.Emitter.emit (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-emitter\index.js:134:20)
+    at Manager.ondecoded (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\manager.js:301:8)TypeError: Arguments to path.join must be strings
+    at Object.win32.join (path.js:233:13)
+    at new Actor (e:\performance-framework\node_modules\dena-robot\lib\agent\actor.js:20:44)
+    at Object.Agent.run (e:\performance-framework\node_modules\dena-robot\lib\agent\agent.js:96:25)
+    at Socket.<anonymous> (e:\performance-framework\node_modules\dena-robot\lib\agent\agent.js:73:19)
+    at Socket.Emitter.emit (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-emitter\index.js:134:20)
+    at Socket.onevent (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\socket.js:254:10)
+    at Socket.onpacket (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\socket.js:212:12)
+    at Manager.<anonymous> (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-bind\index.js:21:15)
+    at Manager.Emitter.emit (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-emitter\index.js:134:20)
+    at Manager.ondecoded (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\manager.js:301:8)TypeError: Arguments to path.join must be strings
+    at Object.win32.join (path.js:233:13)
+    at new Actor (e:\performance-framework\node_modules\dena-robot\lib\agent\actor.js:20:44)
+    at Object.Agent.run (e:\performance-framework\node_modules\dena-robot\lib\agent\agent.js:96:25)
+    at Socket.<anonymous> (e:\performance-framework\node_modules\dena-robot\lib\agent\agent.js:73:19)
+    at Socket.Emitter.emit (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-emitter\index.js:134:20)
+    at Socket.onevent (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\socket.js:254:10)
+    at Socket.onpacket (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\socket.js:212:12)
+    at Manager.<anonymous> (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-bind\index.js:21:15)
+    at Manager.Emitter.emit (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-emitter\index.js:134:20)
+    at Manager.ondecoded (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\manager.js:301:8)TypeError: Arguments to path.join must be strings
+    at Object.win32.join (path.js:233:13)
+    at new Actor (e:\performance-framework\node_modules\dena-robot\lib\agent\actor.js:20:44)
+    at Object.Agent.run (e:\performance-framework\node_modules\dena-robot\lib\agent\agent.js:96:25)
+    at Socket.<anonymous> (e:\performance-framework\node_modules\dena-robot\lib\agent\agent.js:73:19)
+    at Socket.Emitter.emit (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-emitter\index.js:134:20)
+    at Socket.onevent (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\socket.js:254:10)
+    at Socket.onpacket (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\socket.js:212:12)
+    at Manager.<anonymous> (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-bind\index.js:21:15)
+    at Manager.Emitter.emit (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\node_modules\component-emitter\index.js:134:20)
+    at Manager.ondecoded (e:\performance-framework\node_modules\dena-robot\node_modules\socket.io-client\lib\manager.js:301:8)SyntaxError: Unexpected token F
+    at Object.parse (native)
+    at IncomingMessage.<anonymous> (e:\performance-framework\node_modules\dena-client\gd-client\lib\client.js:126:25)
+    at IncomingMessage.emit (events.js:129:20)
+    at _stream_readable.js:908:16
+    at process._tickCallback (node.js:355:11)TypeError: Cannot read property 'userdata_list' of undefined
+    at evalmachine.<anonymous>:408:71
+    at IncomingMessage.<anonymous> (e:\performance-framework\node_modules\dena-client\gd-client\lib\client.js:133:17)
+    at IncomingMessage.emit (events.js:129:20)
+    at _stream_readable.js:908:16
+    at process._tickCallback (node.js:355:11)TypeError: Cannot read property 'userdata_list' of undefined
+    at evalmachine.<anonymous>:409:71
+    at IncomingMessage.<anonymous> (e:\performance-framework\node_modules\dena-client\gd-client\lib\client.js:133:17)
+    at IncomingMessage.emit (events.js:129:20)
+    at _stream_readable.js:908:16
+    at process._tickCallback (node.js:355:11)ReferenceError: GetChatPersonal is not defined
+    at null.fn (evalmachine.<anonymous>:194:51)
+    at breath (e:\performance-framework\node_modules\dena-client\gd-client\lib\client.js:39:18)
+    at wrapper [as _onTimeout] (timers.js:274:14)
+    at Timer.listOnTimeout (timers.js:119:15)ReferenceError: getRandomInt is not defined
+    at null.fn (evalmachine.<anonymous>:221:36)
+    at breath (e:\performance-framework\node_modules\dena-client\gd-client\lib\client.js:39:18)
+    at wrapper [as _onTimeout] (timers.js:274:14)
+    at Timer.listOnTimeout (timers.js:119:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:85:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)Error: Unexpected msg Length!
+    at Object.Protocol.decode (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:45:15)
+    at processMessage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:177:32)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:122:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot call method 'encode' of undefined
+    at evalmachine.<anonymous>:85:88
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:192:13)
+    at Socket.Esport.connect (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:122:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot call method 'encode' of undefined
+    at evalmachine.<anonymous>:85:88
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:192:13)
+    at Socket.Esport.connect (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:122:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot call method 'encode' of undefined
+    at evalmachine.<anonymous>:85:88
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:192:13)
+    at Socket.Esport.connect (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:122:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot call method 'encode' of undefined
+    at evalmachine.<anonymous>:85:88
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:192:13)
+    at Socket.Esport.connect (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:122:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)ReferenceError: getEProtoid is not defined
+    at null.fn (evalmachine.<anonymous>:68:21)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at evalmachine.<anonymous>:116:56
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:192:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:122:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot read property 'account_datas' of undefined
+    at evalmachine.<anonymous>:124:39
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:192:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:122:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)ReferenceError: StepStats is not defined
+    at evalmachine.<anonymous>:125:45
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:192:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:122:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)ReferenceError: self is not defined
+    at Esport.request (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:153:9)
+    at null.fn (evalmachine.<anonymous>:111:12)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)Error: Illegal value for Message.Field .protocol.C2S_AccountVerifyRequest.account of type string: object (no array expected)
+    at Error (<anonymous>)
+    at null.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:2693:27)
+    at ProtoBuf.Reflect.FieldPrototype.verifyValue (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:2711:21)
+    at MessagePrototype.set (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:1835:63)
+    at null.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\protobuf.js:57:26)
+    at null.fn (evalmachine.<anonymous>:116:61)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)Error: Illegal value for Message.Field .protocol.C2S_AccountVerifyRequest.account of type string: object (no array expected)
+    at Error (<anonymous>)
+    at null.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:2693:27)
+    at ProtoBuf.Reflect.FieldPrototype.verifyValue (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:2711:21)
+    at MessagePrototype.set (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:1835:63)
+    at null.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\protobuf.js:57:26)
+    at null.fn (evalmachine.<anonymous>:117:61)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Object  has no method 'join'
+    at genAccount (evalmachine.<anonymous>:26:23)
+    at null.fn (evalmachine.<anonymous>:115:31)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'debug' of undefined
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:127:26)
+    at Socket.emit (events.js:95:17)
+    at TCP.close (net.js:466:12)TypeError: Cannot read property 'length' of undefined
+    at CreatePlayerBasicInfoRequest [as fn] (evalmachine.<anonymous>:132:39)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:80:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Object #<Console> has no method 'INFO'
+    at Esport.log (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:159:23)
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:190:18)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:114:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot read property 'length' of undefined
+    at CreatePlayerBasicInfoRequest [as fn] (evalmachine.<anonymous>:132:39)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:80:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at CreatePlayerBasicInfoRequest [as fn] (evalmachine.<anonymous>:132:39)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:80:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at CreatePlayerBasicInfoRequest [as fn] (evalmachine.<anonymous>:132:39)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:80:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at CreatePlayerBasicInfoRequest [as fn] (evalmachine.<anonymous>:132:39)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:80:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '36' of object #<Console> is not a function
+    at Esport.log (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:159:23)
+    at Esport.request (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:149:14)
+    at null._onTimeout (evalmachine.<anonymous>:121:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at null._onTimeout (evalmachine.<anonymous>:147:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at CreatePlayerBasicInfoRequest [as fn] (evalmachine.<anonymous>:147:80)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:81:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at null._onTimeout (evalmachine.<anonymous>:149:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'write' of null
+    at Esport.request (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:151:17)
+    at C2S_GambleRequest (evalmachine.<anonymous>:235:16)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'write' of null
+    at Esport.request (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:151:17)
+    at C2S_GambleRequest (evalmachine.<anonymous>:235:16)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at null._onTimeout (evalmachine.<anonymous>:149:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at null._onTimeout (evalmachine.<anonymous>:149:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: C2S_GetResoucesRequest is not defined
+    at null.fn (evalmachine.<anonymous>:176:21)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:82:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)Error: .protocol.C2S_GetCardInfoRequest#begin_index is not a field: undefined
+    at Error (<anonymous>)
+    at MessagePrototype.set (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:1832:39)
+    at null.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\protobuf.js:57:26)
+    at C2S_GetCardInfoRequest (evalmachine.<anonymous>:301:64)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '360243' of object #<Console> is not a function
+    at Esport.log (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:160:23)
+    at AccountVerifyRequest (evalmachine.<anonymous>:209:16)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '1' of object #<Console> is not a function
+    at Esport.log (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:160:23)
+    at CreatePlayerBasicInfoRequest (evalmachine.<anonymous>:229:16)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)Error: .protocol.C2S_LoginRequest#account_id is not a field: undefined
+    at Error (<anonymous>)
+    at MessagePrototype.set (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:1832:39)
+    at null.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\protobuf.js:57:26)
+    at CreatePlayerBasicInfoRequest (evalmachine.<anonymous>:252:60)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'write' of null
+    at Esport.request (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:152:17)
+    at C2S_GetBagInfoRequest (evalmachine.<anonymous>:274:16)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'write' of null
+    at Esport.request (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:152:17)
+    at C2S_GetBagInfoRequest (evalmachine.<anonymous>:274:16)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'write' of null
+    at Esport.request (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:152:17)
+    at C2S_GetBagInfoRequest (evalmachine.<anonymous>:278:16)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'write' of null
+    at Esport.request (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:152:17)
+    at C2S_GetBagInfoRequest (evalmachine.<anonymous>:278:16)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: consloe is not defined
+    at null._onTimeout (evalmachine.<anonymous>:583:13)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: consloe is not defined
+    at null._onTimeout (evalmachine.<anonymous>:583:13)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)

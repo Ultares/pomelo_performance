@@ -1,0 +1,10 @@
+{
+  "master": {
+    "host": "127.0.0.1",
+    "port": 8888,
+    "webport": 8889,
+    "interval": 5000
+  },
+  "account": "account_a1.json",
+  "server": "gtm3999"
+}
