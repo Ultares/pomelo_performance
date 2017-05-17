@@ -5,6 +5,6 @@
     "webport": 8889,
     "interval": 100
   },
-  "account": "account_i1.json",
+  "account": "gamble.json",
   "server": "gtm3999"
 }

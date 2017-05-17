@@ -410,4 +410,254 @@ TypeError: undefined is not a function
     at null._onTimeout (evalmachine.<anonymous>:583:13)
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: consloe is not defined
     at null._onTimeout (evalmachine.<anonymous>:583:13)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: count is not defined
+    at evalmachine.<anonymous>:288:29
+    at Array.forEach (native)
+    at evalmachine.<anonymous>:286:32
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:192:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:117:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)ReferenceError: count is not defined
+    at evalmachine.<anonymous>:290:35
+    at Array.forEach (native)
+    at evalmachine.<anonymous>:287:32
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)ReferenceError: count is not defined
+    at evalmachine.<anonymous>:291:25
+    at Array.forEach (native)
+    at evalmachine.<anonymous>:287:32
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)TypeError: Object [object Object] has no method 'update'
+    at evalmachine.<anonymous>:291:45
+    at Array.forEach (native)
+    at evalmachine.<anonymous>:287:32
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)TypeError: Object [object Object] has no method 'update'
+    at evalmachine.<anonymous>:292:45
+    at Array.forEach (native)
+    at evalmachine.<anonymous>:287:32
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)ReferenceError: __dirname is not defined
+    at null._onTimeout (evalmachine.<anonymous>:328:26)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: __dirname is not defined
+    at null._onTimeout (evalmachine.<anonymous>:328:26)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: __dirname is not defined
+    at null._onTimeout (evalmachine.<anonymous>:328:20)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: __dirname is not defined
+    at null._onTimeout (evalmachine.<anonymous>:328:20)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: __dirname is not defined
+    at null._onTimeout (evalmachine.<anonymous>:328:20)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: __dirname is not defined
+    at null._onTimeout (evalmachine.<anonymous>:328:20)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.writeFileSync (fs.js:972:11)
+    at null._onTimeout (evalmachine.<anonymous>:328:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.writeFileSync (fs.js:972:11)
+    at null._onTimeout (evalmachine.<anonymous>:328:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.writeFileSync (fs.js:972:11)
+    at null._onTimeout (evalmachine.<anonymous>:328:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.writeFileSync (fs.js:972:11)
+    at null._onTimeout (evalmachine.<anonymous>:328:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.appendFileSync (fs.js:1019:11)
+    at null._onTimeout (evalmachine.<anonymous>:329:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'gambles' of undefined
+    at null.fn (evalmachine.<anonymous>:329:31)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'gambles' of undefined
+    at null.fn (evalmachine.<anonymous>:329:31)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Object [object Object] has no method 'keys'
+    at null.fn (evalmachine.<anonymous>:329:40)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'C2S_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:70:33)
+    at null._onTimeout (evalmachine.<anonymous>:135:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'C2S_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:70:33)
+    at null._onTimeout (evalmachine.<anonymous>:135:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'C2S_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:70:33)
+    at null._onTimeout (evalmachine.<anonymous>:135:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'C2S_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:70:33)
+    at null._onTimeout (evalmachine.<anonymous>:135:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: logger is not defined
+    at getEProtoId (evalmachine.<anonymous>:70:5)
+    at null._onTimeout (evalmachine.<anonymous>:136:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: Logger is not defined
+    at getEProtoId (evalmachine.<anonymous>:70:5)
+    at null._onTimeout (evalmachine.<anonymous>:136:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'C2S_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:71:33)
+    at null._onTimeout (evalmachine.<anonymous>:136:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'C2S_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:72:33)
+    at null._onTimeout (evalmachine.<anonymous>:137:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'C2S_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:72:33)
+    at null._onTimeout (evalmachine.<anonymous>:137:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'C2S_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:72:33)
+    at null._onTimeout (evalmachine.<anonymous>:137:24)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)RangeError: Trying to access beyond buffer length
+    at checkOffset (buffer.js:582:11)
+    at Buffer.readUInt16LE (buffer.js:595:5)
+    at ushort (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\dena-bytebuffer\index.js:74:62)
+    at Object.Protocol.decode (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:32:47)
+    at processMessage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:176:32)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:117:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)TypeError: Cannot read property 'account_id' of null
+    at evalmachine.<anonymous>:145:63
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)Error: byteArray must got len argument
+    at byteArray (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\dena-bytebuffer\index.js:183:19)
+    at Object.Protocol.decode (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:37:56)
+    at processMessage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:176:32)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:117:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)Error: byteArray must got len argument
+    at ByteBuffer.byteArray (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\dena-bytebuffer\index.js:183:19)
+    at Object.Protocol.decode (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:37:56)
+    at processMessage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:176:32)
+    at Socket.Esport.connect (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:117:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)Error: byteArray must got len argument
+    at byteArray (D:\QA\performance-framework\node_modules\dena-client\esport-client\node_modules\dena-bytebuffer\index.js:183:19)
+    at Object.Protocol.decode (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:37:56)
+    at processMessage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:176:32)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:117:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)TypeError: Cannot read property 'account_id' of null
+    at evalmachine.<anonymous>:145:63
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.Esport.connect (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot read property 'account_id' of null
+    at evalmachine.<anonymous>:145:63
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot read property 'account_id' of null
+    at evalmachine.<anonymous>:146:67
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot read property 'account_id' of null
+    at evalmachine.<anonymous>:146:67
+    at processPackage (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:193:13)
+    at Socket.<anonymous> (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:118:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot read property 'length' of undefined
+    at null._onTimeout (evalmachine.<anonymous>:162:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at null._onTimeout (evalmachine.<anonymous>:162:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at null._onTimeout (evalmachine.<anonymous>:162:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
+    at null._onTimeout (evalmachine.<anonymous>:162:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: __dirname is not defined
+    at null.fn (evalmachine.<anonymous>:347:20)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: path is not defined
+    at null.fn (evalmachine.<anonymous>:343:20)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.appendFileSync (fs.js:1019:11)
+    at null.fn (evalmachine.<anonymous>:350:16)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.appendFileSync (fs.js:1019:11)
+    at null.fn (evalmachine.<anonymous>:350:16)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.appendFileSync (fs.js:1019:11)
+    at null.fn (evalmachine.<anonymous>:350:16)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.appendFileSync (fs.js:1019:11)
+    at null.fn (evalmachine.<anonymous>:350:16)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Bad arguments
+    at Object.fs.appendFileSync (fs.js:1019:11)
+    at null.fn (evalmachine.<anonymous>:350:16)
+    at breath (D:\QA\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:84:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)

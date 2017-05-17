@@ -156,7 +156,7 @@ es.actions.push(
                     Protobuf['PlayerBasic']['C2S_CreatePlayerBasicInfoRequest'].encode({
                         account_id: es.caseData.account_id,
                         icon_id: 1,
-                        name: 'S_robot_' + es.caseData.account,
+                        name: es.caseData.account.substr(0, 8),//seData.account,
                         initial_team_index: 1
                     }),
                     getEProtoId('S2C_LoginResponse_ID'),
