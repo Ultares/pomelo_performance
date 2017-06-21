@@ -4,7 +4,7 @@
 var fs = require('fs');
 
 var filename = 'gamble.json';
-var pre = 'game_';
+var pre = 'Test_';
 
 function genAccount(count) {
     var i = 0;

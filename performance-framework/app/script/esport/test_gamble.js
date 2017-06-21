@@ -102,58 +102,6 @@ function getPos(cardNo) {
 
 
 es.actions.push(
-    // function () {
-    //     es.register(getEProtoId('S2C_TaskDataUpdate_ID'),
-    //         function (message) {
-    //             if (es.caseData.debug) {
-    //                 data = Protobuf['Task']['S2C_TaskDataUpdate'].decode(message);
-    //                 // console.log('S2C_TaskDataUpdate====>', JSON.stringify(data))
-    //             }
-    //         });
-    //
-    //     es.register(getEProtoId('S2C_UpdateCards_ID'), function (message) {
-    //         if (es.caseData.debug) {
-    //             data = Protobuf['Card']['S2C_UpdateCards'].decode(message);
-    //             // console.log('S2C_UpdateCards====>', JSON.stringify(data))
-    //         }
-    //     });
-    //     // es.register(getEProtoId('S2C_UpdateItems_ID'),
-    //     //     function (message) {
-    //     //         if (es.caseData.debug) {
-    //     //             data = Protobuf['Item']['S2C_UpdateItems'].decode(message);
-    //     //             console.log('S2C_UpdateItems====>', JSON.stringify(data))
-    //     //         }
-    //     //     });
-    //     // es.register(getEProtoId('S2C_UpdateResources_ID'),
-    //     //     function (message) {
-    //     //         if (es.caseData.debug) {
-    //     //             data = Protobuf['Player']['S2C_UpdateResources'].decode(message);
-    //     //             // console.log('S2C_UpdateResources====>', JSON.stringify(data))
-    //     //         }
-    //     //     });
-    //     es.register(getEProtoId('S2C_UpdateMailDataMsg_ID'),
-    //         function (message) {
-    //             if (es.caseData.debug) {
-    //                 data = Protobuf['Mail']['S2C_UpdateMailDataMsg'].decode(message);
-    //                 // console.log('S2C_UpdateMailDataMsg====>', JSON.stringify(data))
-    //             }
-    //         });
-    //     es.register(getEProtoId('S2C_ErrorCodeMsg_ID'),
-    //         function (message) {
-    //             if (es.caseData.debug) {
-    //                 data = Protobuf['Client']['S2C_ErrorCodeMsg'].decode(message);
-    //                 // console.log('S2C_ErrorCodeMsg====>', JSON.stringify(data))
-    //             }
-    //         });
-    //     es.register(getEProtoId('S2C_CreatePlayerBasicInfoResponse_ID'),
-    //         function (message) {
-    //             if (es.caseData.debug) {
-    //                 data = Protobuf['PlayerBasic']['S2C_CreatePlayerBasicInfoResponse'].decode(message);
-    //                 // console.log('S2C_CreatePlayerBasicInfoResponse====>', JSON.stringify(data))
-    //             }
-    //         });
-    // },
-
     function () {
         if (!es.caseData.previous) {
             return 1;
