@@ -64,6 +64,7 @@ function getRandomInt(min, max) {
 
 getEProtoId = function (EProtoStr) {
     var mType = EProtoStr.split('_')[0] + '_MessageId';
+    es.log("EProtoStr : " + EProtoStr);
     return Protobuf['MessageID'][mType][EProtoStr];
 };
 
@@ -147,16 +148,22 @@ es.actions.push(
             return 1;
         }
         es.caseData.previous = false;
-        es.log('C2S_AccountVerifyRequest_ID');
         setTimeout(function () {
             es.caseData.account = genAccount();
-            es.request(getEProtoId('C2S_AccountVerifyRequest_ID'),
-                Protobuf['Account']['C2S_AccountVerifyRequest'].encode({
-                    account: es.caseData.account,
-                    platform_id: 'xingluo',
-                    global_server_id: '7',
-                    game_id: '1',
-                    platform_session: 'zzzzzzzz'
+            es.log('C2S_AccountVerifyRequest_ID: ' + es.caseData.account);
+            es.request(32, //getEProtoId('C2S_XlAccountVerifyRequest_ID'),
+                Protobuf['Account']['C2S_XlAccountVerifyRequest'].encode({
+                    request: {
+                        account: es.caseData.account,
+                        platform_id: 'xl',
+                        global_server_id: '1',
+                        game_id: '1',
+                        platform_session: 'zzzzzzzz',
+                        gameRegion: "1area",
+                        accountType: "1",
+                        channel: "xl"
+                    },
+                    key: "xl_sp_key"
                 }),
                 getEProtoId('S2C_AccountVerifyResponse_ID'),
                 function (message) {
@@ -165,6 +172,7 @@ es.actions.push(
                     if (data.account_info) {
                         es.caseData.account_id = data.account_info.account_id;
                         es.caseData.account_datas = data.account_info['account_datas'];
+                        es.log("es.caseData.account_datas.length: " + es.caseData.account_datas.length);
                     } else {
                         es.caseData.account_datas = [];
                     }
@@ -180,12 +188,16 @@ es.actions.push(
         es.caseData.previous = false;
         setTimeout(function () {
             if (!es.caseData.account_datas.length) {
-                es.request(getEProtoId('C2S_CreatePlayerBasicInfoRequest_ID'),
-                    Protobuf['PlayerBasic']['C2S_CreatePlayerBasicInfoRequest'].encode({
-                        account_id: es.caseData.account,
-                        icon_id: 1,
-                        name: es.caseData.account.substr(0, 8),
-                        initial_team_index: 1
+                es.request(getEProtoId('C2S_XLCreatePlayerBasicInfoRequest_ID'),
+                    Protobuf['PlayerBasic']['C2S_XLCreatePlayerBasicInfoRequest'].encode({
+                        request: {
+                            account_id: es.caseData.account,
+                            icon_id: 1,
+                            name: es.caseData.account.substr(0, 8),
+                            initial_team_index: 1,
+                            channel: "xl"
+                        },
+                        key: "xl_sp_key"
                     }),
                     getEProtoId('S2C_LoginResponse_ID'),
                     function (message) {
@@ -195,10 +207,13 @@ es.actions.push(
                     }
                 );
             } else {
-                es.request(getEProtoId('C2S_LoginRequest_ID'),
-                    Protobuf['Player']['C2S_LoginRequest'].encode({
-                        account: es.caseData.account,
-                        player_id: es.caseData.account_datas[0]['player_id']
+                es.request(getEProtoId('C2S_XLLoginRequest_ID'),
+                    Protobuf['Player']['C2S_XLLoginRequest'].encode({
+                        request: {
+                            account: es.caseData.account,
+                            player_id: es.caseData.account_datas[0]['player_id'],
+                            channel: "xl"
+                        }
                     }),
                     getEProtoId('S2C_LoginResponse_ID'),
                     function (message) {
@@ -278,11 +293,11 @@ es.actions.push(
                 [
                     C2S_EchoGameS,
                     C2S_GetTalentInfoRequest,
-                    C2S_AddItem_11005,
-                    EnterInstanceRequest,
-                    C2S_BattleTacticOptionRequest,
-                    C2S_BattleTacticRequest,
-                    C2S_LeaveBattle,
+                    // C2S_AddItem_11005,
+                    // EnterInstanceRequest,
+                    // C2S_BattleTacticOptionRequest,
+                    // C2S_BattleTacticRequest,
+                    // C2S_LeaveBattle,
                     C2S_GetCardInfoRequest,
                     C2S_GetCardInfoTeamsRequest,
                     C2S_RecruitInfoRequest,
@@ -292,13 +307,13 @@ es.actions.push(
                     C2S_GetRankInfoByTypeRequest,
                     C2S_GetCardInfoPositionsRequest,
                     C2S_GetHeroPoolInfo,
-                    C2S_TeamPropertyRequest,
+                    // C2S_TeamPropertyRequest,
                     C2S_GloryInfoRequest,
                     C2S_MailInfoRequest,
                     C2S_ChatInfoRequest,
                     C2S_TaskInfoRequest,
-                    C2S_AddItem_11002,
-                    C2S_GambleRequest
+                    // C2S_AddItem_11002,
+                    // C2S_GambleRequest
                 ];
         }
         es.funcArray.forEach(function (element, index, array) {

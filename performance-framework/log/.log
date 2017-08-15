@@ -25734,4 +25734,40 @@ Error: Illegal value for Message.Field .protocol.Team.cards of type message: und
     at null._onTimeout (evalmachine.<anonymous>:183:43)
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'length' of undefined
     at null._onTimeout (evalmachine.<anonymous>:183:43)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'caseData' of undefined
+    at Esport.request (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:136:18)
+    at null._onTimeout (evalmachine.<anonymous>:153:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'caseData' of undefined
+    at Esport.request (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:136:18)
+    at null._onTimeout (evalmachine.<anonymous>:153:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)Error: Illegal value for Message.Field .protocol.C2S_AccountVerifyRequest.accountType of type string: number (not a string)
+    at Error (<anonymous>)
+    at null.<anonymous> (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:2693:27)
+    at ProtoBuf.Reflect.FieldPrototype.verifyValue (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:2773:29)
+    at MessagePrototype.set (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:1835:63)
+    at MessagePrototype.set (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:1826:42)
+    at Message (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:1759:38)
+    at ProtoBuf.Reflect.FieldPrototype.verifyValue (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:2808:32)
+    at MessagePrototype.set (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\node_modules\protobufjs\dist\ProtoBuf.js:1835:63)
+    at null.<anonymous> (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\protobuf.js:57:30)
+    at null._onTimeout (evalmachine.<anonymous>:154:67)TypeError: Cannot read property 'caseData' of undefined
+    at Esport.request (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:136:18)
+    at null._onTimeout (evalmachine.<anonymous>:153:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'log' of undefined
+    at Esport.request (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:136:10)
+    at null._onTimeout (evalmachine.<anonymous>:153:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '8' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:278:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'S2C_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:68:33)
+    at null._onTimeout (evalmachine.<anonymous>:168:17)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'S2C_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:68:33)
+    at null._onTimeout (evalmachine.<anonymous>:168:17)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'S2C_MessageId' of undefined
+    at getEProtoId (evalmachine.<anonymous>:68:33)
+    at null._onTimeout (evalmachine.<anonymous>:168:17)
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)

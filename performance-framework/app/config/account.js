@@ -4,7 +4,7 @@
 var fs = require('fs');
 
 var filename = 'gamble.json';
-var pre = 'Test_';
+var pre = 'robot_';
 
 function genAccount(count) {
     var i = 0;
@@ -31,4 +31,4 @@ function genAccount(count) {
     fs.appendFileSync(filename, ']' + '\r\n');
 }
 
-genAccount(1000);
+genAccount(10000);
