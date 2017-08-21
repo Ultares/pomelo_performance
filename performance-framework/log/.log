@@ -25770,4 +25770,111 @@ Error: Illegal value for Message.Field .protocol.Team.cards of type message: und
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'S2C_MessageId' of undefined
     at getEProtoId (evalmachine.<anonymous>:68:33)
     at null._onTimeout (evalmachine.<anonymous>:168:17)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'encode' of undefined
+    at monitorRequest (evalmachine.<anonymous>:83:38)
+    at C2S_EnterStarGameRequest (evalmachine.<anonymous>:737:13)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'S2C_StarGameFinishResponse' of undefined
+    at evalmachine.<anonymous>:87:53
+    at processPackage (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:188:13)
+    at Socket.<anonymous> (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:111:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot read property 'S2C_StarGameFinishResponse' of undefined
+    at evalmachine.<anonymous>:87:53
+    at processPackage (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:188:13)
+    at Socket.<anonymous> (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:111:9)
+    at Socket.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:765:14)
+    at Socket.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:427:10)
+    at emitReadable (_stream_readable.js:423:5)
+    at readableAddChunk (_stream_readable.js:166:9)
+    at Socket.Readable.push (_stream_readable.js:128:10)TypeError: Cannot read property 'teams' of undefined
+    at C2S_GloryGameRequest (evalmachine.<anonymous>:721:115)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'teams' of undefined
+    at C2S_GloryGameRequest (evalmachine.<anonymous>:728:66)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'teams' of undefined
+    at C2S_GloryGameRequest (evalmachine.<anonymous>:728:66)
+    at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '2' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '3' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '1' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)
+    at timers.js:133:18
+    at process._tickCallback (node.js:458:13)
+    at process._tickFromSpinner (node.js:433:15)TypeError: Property '8' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '2' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)
+    at timers.js:133:18
+    at process._tickCallback (node.js:458:13)TypeError: Property '2' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '6' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)
+    at timers.js:133:18
+    at process._tickCallback (node.js:458:13)TypeError: Property '1' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)
+    at timers.js:133:18
+    at process._tickCallback (node.js:458:13)TypeError: Property '3' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '1' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '7' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:156:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '20' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:157:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Property '4' of object #<Console> is not a function
+    at Esport.log (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:157:23)
+    at null.fn (evalmachine.<anonymous>:295:24)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:76:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)

@@ -73,17 +73,17 @@ getEProtoId = function (EProtoStr) {
 //        q: "",
 //        r: "",
 //        qOpts: {},
-//        isMonitor: true,
-//        sr: false // save response
+//        isMonitor: true, monitor response times,default is true.
+//        sr: false // save response data.
 
 function monitorRequest(opts, cb) {
     var isMonitor = (opts.isMonitor == undefined) ? true : opts.isMonitor;
-    isMonitor && monitor(START, opts.q, '1');
+    isMonitor && monitor(START, opts.r, '1');
     es.request(getEProtoId(opts.q + "_ID"),
         Protobuf[opts.qName][opts.q].encode(opts.qOpts),
         getEProtoId(opts.r + "_ID"),
         function (message) {
-            isMonitor && monitor(END, opts.q, '1');
+            isMonitor && monitor(END, opts.r, '1');
             data = opts.rName ? Protobuf[opts.rName][opts.r].decode(message) :
                 Protobuf[opts.qName][opts.r].decode(message);
             es.unregister(getEProtoId(opts.r + "_ID"));
@@ -156,7 +156,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: '1',
+                        global_server_id: '6', // '1' QA
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -231,10 +231,10 @@ es.actions.push(
         if (!es.caseData.previous) {
             return 1;
         }
-        if (es.caseData.loopCount <= 0) {
-            es.log('es.caseData.loopCount:' + es.caseData.loopCount);
-            return undefined;
-        }
+        // if (es.caseData.loopCount <= 0) {
+        //     es.log('es.caseData.loopCount:' + es.caseData.loopCount);
+        //     return undefined;
+        // }
         // es.log('es.caseData.loopCount:' + es.caseData.loopCount);
         // es.connect(actor.server,function(){});
         es.caseData.previous = false;
@@ -242,76 +242,95 @@ es.actions.push(
         if (es.caseData.ratemode) {
             es.funcmap = {
                 Instance: {
-                    funcArray: [C2S_AddItem_11005,
+                    funcArray: [
                         EnterInstanceRequest,
-                        C2S_BattleTacticOptionRequest,
-                        C2S_BattleTacticRequest,
-                        C2S_LeaveBattle], rate: 8
+                        C2S_SkipBattleRequest,
+                        C2S_LeaveBattle_Instance
+                    ], rate: 4
                 },
                 Gamble: {
-                    funcArray: [C2S_AddItem_11002,
-                        C2S_GambleRequest], rate: 1
+                    funcArray: [
+                        C2S_AddItem_11002,
+                        C2S_GambleRequest
+                    ], rate: 1
+                },
+                Star:{
+                    funcArray:[
+                        C2S_EnterStarGameRequest,
+                        C2S_SkipBattleRequest,
+                        C2S_LeaveBattle_Star
+                    ],rate: 4
+                },
+                Glory:{
+                    funcArray:[
+                        C2S_AddItem_11005,
+                        C2S_GloryOpenChapterRequest,
+                        C2S_GetCardInfoTeamsRequest,
+                        C2S_GloryGameRequest,
+                        C2S_LeaveBattle_Glory
+                    ],rate: 10
                 },
                 Info: {
-                    funcArray: [C2S_GetCardInfoRequest,
-                        C2S_GetCardInfoTeamsRequest,
+                    funcArray: [
+                        C2S_GetCardInfoRequest,
                         C2S_RecruitInfoRequest,
                         C2S_GetBagInfoRequest,
                         C2S_GetShopInfoRequest,
                         C2S_EchoGameS,
-                        C2S_GetRankInfoByTypeRequest,
+                        C2S_TeamPropertyRequest,
                         C2S_GetCardInfoPositionsRequest,
                         C2S_GetHeroPoolInfo,
-                        C2S_TeamPropertyRequest,
                         C2S_GloryInfoRequest,
                         C2S_MailInfoRequest,
-                        C2S_ChatInfoRequest,
-                        C2S_TaskInfoRequest], rate: 1
+                        C2S_TaskInfoRequest
+                    ], rate: 1
                 }
             };
             es.willTest = [];
-            es.endRate = 8;
+            es.endRate = 20;
             var i = 0;
             while (i <= 10) {
                 for (var k in es.funcmap) {
                     var rate = getRandomInt(1, es.endRate);
-                    es.log('rate is <%s> and k.rate is <%s> ', rate, es.funcmap[k].rate);
+                    es.log('rate is ' + rate +' and k.rate is ' + es.funcmap[k].rate);
                     if (rate <= es.funcmap[k].rate) {
                         es.willTest = es.willTest.concat(es.funcmap[k].funcArray);
                     }
                 }
                 if (es.willTest.length) {
-                    es.log('Random <%s> time(s)', i);
+                    es.log('Random ' + i + ' time(s)');
                     break;
                 }
                 i++;
             }
-            es.log('robot.willTest is ', es.willTest.length);
+            es.log('robot.willTest is ' +  es.willTest.length);
             es.funcArray = es.willTest;
         } else {
             es.funcArray =
                 [
                     C2S_EchoGameS,
-                    C2S_GetTalentInfoRequest,
                     // C2S_AddItem_11005,
+                    // C2S_GetCardInfoTeamsRequest,
+                    // C2S_EnterStarGameRequest,
+                    // C2S_SkipBattleRequest,
+                    // C2S_LeaveBattle_Star,
+                    // C2S_GloryOpenChapterRequest,
+                    // C2S_GloryGameRequest,
+                    // C2S_LeaveBattle_Glory,
                     // EnterInstanceRequest,
-                    // C2S_BattleTacticOptionRequest,
-                    // C2S_BattleTacticRequest,
-                    // C2S_LeaveBattle,
-                    C2S_GetCardInfoRequest,
-                    C2S_GetCardInfoTeamsRequest,
-                    C2S_RecruitInfoRequest,
-                    C2S_GetBagInfoRequest,
-                    C2S_GetShopInfoRequest,
-                    C2S_EchoGameS,
-                    C2S_GetRankInfoByTypeRequest,
-                    C2S_GetCardInfoPositionsRequest,
-                    C2S_GetHeroPoolInfo,
+                    // C2S_SkipBattleRequest,
+                    // C2S_LeaveBattle_Instance,
+                    // C2S_GetCardInfoRequest,
+                    // C2S_RecruitInfoRequest,
+                    // C2S_GetBagInfoRequest,
+                    // C2S_GetShopInfoRequest,
+                    // C2S_EchoGameS,
                     // C2S_TeamPropertyRequest,
-                    C2S_GloryInfoRequest,
-                    C2S_MailInfoRequest,
-                    C2S_ChatInfoRequest,
-                    C2S_TaskInfoRequest,
+                    // C2S_GetCardInfoPositionsRequest,
+                    // C2S_GetHeroPoolInfo,
+                    // C2S_GloryInfoRequest,
+                    // C2S_MailInfoRequest,
+                    // C2S_TaskInfoRequest,
                     // C2S_AddItem_11002,
                     // C2S_GambleRequest
                 ];
@@ -329,7 +348,7 @@ es.actions.push(
                     console.log('Error====>', err);
                 } else {
                     es.caseData.previous = true;
-                    es.caseData.loopCount -= 1;
+                    // es.caseData.loopCount -= 1;
                 }
             }
         );
@@ -481,7 +500,7 @@ es.actions.push(
                 qName: "Team",
                 q: "C2S_TeamPropertyRequest",
                 r: "S2C_TeamPropertyResponse",
-                qOpts: {team_id: 1}
+                qOpts: {team_id: 1},
             }, cb);
         }
 
@@ -514,7 +533,8 @@ es.actions.push(
                 qName: "Card",
                 q: "C2S_GetCardInfoTeamsRequest",
                 r: "S2C_GetCardInfoTeamsResponse",
-                qOpts: {}
+                qOpts: {},
+                sr: true
             }, cb);
         }
 
@@ -701,6 +721,44 @@ es.actions.push(
             }, cb);
         }
 
+        function C2S_GloryOpenChapterRequest(cb) {
+            es.caseData.chapter_id = 1;
+            monitorRequest({
+                qName: "Glory",
+                q: "C2S_GloryOpenChapterRequest",
+                r: "S2C_GloryOpenChapterResponse",
+                qOpts: {
+                    chapter_id: es.caseData.chapter_id
+                }
+            }, cb);
+        }
+
+        function C2S_GloryGameRequest(cb) {
+            es.caseData.glory_chapter_id = 300001;
+            // es.log("es.caseData" + JSON.stringify(es.caseData));
+            monitorRequest({
+                qName: "Glory",
+                q: "C2S_GloryGameRequest",
+                r: "S2C_GloryGameResponse",
+                qOpts: {
+                    instance_id: es.caseData.glory_chapter_id,
+                    team: es.caseData.S2C_GetCardInfoTeamsResponse['teams'][0]
+                }
+            }, cb);
+        }
+
+        function C2S_EnterStarGameRequest(cb) {
+            es.caseData.star_instance_id = 300201;
+            monitorRequest({
+                qName: "StarGame",
+                q: "C2S_EnterStarGameRequest",
+                r: "S2C_EnterStarGameResponse",
+                qOpts: {
+                    instance_id: es.caseData.star_instance_id
+                }
+            }, cb);
+        }
+
         function EnterInstanceRequest(cb) {
             es.caseData.instance_id = 100101;
             monitorRequest({
@@ -750,6 +808,15 @@ es.actions.push(
             }, cb);
         }
 
+        function C2S_SkipBattleRequest(cb) {
+            monitorRequest({
+                qName: "Battle",
+                q: "C2S_SkipBattleRequest",
+                r: "S2C_SkipBattleResponse",
+                qOpts: {}
+            }, cb);
+        }
+
         function C2S_BattleTacticRequest(cb) {
             monitorRequest({
                 qName: "Battle",
@@ -762,7 +829,27 @@ es.actions.push(
             }, cb);
         }
 
-        function C2S_LeaveBattle(cb) {
+        function C2S_LeaveBattle_Star(cb) {
+            monitorRequest({
+                qName: "Battle",
+                q: "C2S_LeaveBattle",
+                rName: "StarGame",
+                r: "S2C_StarGameFinishResponse",
+                qOpts: {}
+            }, cb);
+        }
+
+        function C2S_LeaveBattle_Glory(cb) {
+            monitorRequest({
+                qName: "Battle",
+                q: "C2S_LeaveBattle",
+                rName: "Glory",
+                r: "S2C_GloryInstanceUpdate",
+                qOpts: {}
+            }, cb);
+        }
+
+        function C2S_LeaveBattle_Instance(cb) {
             monitorRequest({
                 qName: "Battle",
                 q: "C2S_LeaveBattle",
