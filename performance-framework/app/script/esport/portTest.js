@@ -78,6 +78,7 @@ getEProtoId = function (EProtoStr) {
 
 function monitorRequest(opts, cb) {
     var isMonitor = (opts.isMonitor == undefined) ? true : opts.isMonitor;
+    var result = null;
     isMonitor && monitor(START, opts.r, '1');
     es.request(getEProtoId(opts.q + "_ID"),
         Protobuf[opts.qName][opts.q].encode(opts.qOpts),
@@ -89,6 +90,22 @@ function monitorRequest(opts, cb) {
             es.unregister(getEProtoId(opts.r + "_ID"));
             opts.sr && (es.caseData[opts.r] = data) && es.log(opts.r + ': ' + JSON.stringify(es.caseData[opts.r]));
             opts.sr || es.log(opts.r + ': ' + JSON.stringify(data));
+            // error_code  res result
+            if ('error_code' in data)
+            {
+                result = data['error_code'];
+            }else if('res' in data)
+            {
+                result = data['res'];
+            }else if('result' in data)
+            {
+                result = data['result'];
+            }else {
+                result = undefined;
+            }
+            if (result != undefined && result != 0 && result != null){
+                es.log(es.caseData.account + ' [' + opts.q + '] got error code: [' + result + '] ' + JSON.stringify(data), 'error');
+            }
             opts = undefined;
             cb();
         }
@@ -703,7 +720,7 @@ es.actions.push(
                 q: "C2S_GambleRequest",
                 r: "S2C_GamebleResult",
                 rOpts: {
-                    gamble_type: 2,
+                    gamble_type: 1,
                     is_ten_times: false
                 }
             }, cb);
