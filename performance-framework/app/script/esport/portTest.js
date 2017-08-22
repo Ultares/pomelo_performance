@@ -80,6 +80,7 @@ function monitorRequest(opts, cb) {
     var isMonitor = (opts.isMonitor == undefined) ? true : opts.isMonitor;
     var result = null;
     isMonitor && monitor(START, opts.r, '1');
+    console.log('opts.qOpts ' + JSON.stringify(opts.qOpts));
     es.request(getEProtoId(opts.q + "_ID"),
         Protobuf[opts.qName][opts.q].encode(opts.qOpts),
         getEProtoId(opts.r + "_ID"),
@@ -348,8 +349,8 @@ es.actions.push(
                     // C2S_GloryInfoRequest,
                     // C2S_MailInfoRequest,
                     // C2S_TaskInfoRequest,
-                    // C2S_AddItem_11002,
-                    // C2S_GambleRequest
+                    C2S_AddItem_11002,
+                    C2S_GambleRequest
                 ];
         }
         es.funcArray.forEach(function (element, index, array) {
@@ -473,7 +474,7 @@ es.actions.push(
                 r: "S2C_UpdateResources",
                 qOpts: {
                     item_id: 11005,  // 11002
-                    item_count: 6
+                    item_count: 22
                 },
                 isMonitor: false
             }, cb);
@@ -570,7 +571,7 @@ es.actions.push(
                 q: "C2S_EchoGameS",
                 r: "S2C_EchoGameBack",
                 isMonitor: false,
-                rOpts: {}
+                qOpts: {}
             }, cb);
         }
 
@@ -579,7 +580,7 @@ es.actions.push(
                 qName: "Glory",
                 q: "C2S_GloryInfoRequest",
                 r: "S2C_GloryInfoUpdate",
-                rOpts: {}
+                qOpts: {}
             }, cb);
         }
 
@@ -710,7 +711,7 @@ es.actions.push(
                 qName: "Instance",
                 q: "C2S_GetInstanceRequest",
                 r: "S2C_GetInstanceResponse ",
-                rOpts: {}
+                qOpts: {}
             }, cb);
         }
 
@@ -719,7 +720,7 @@ es.actions.push(
                 qName: "Gamble",
                 q: "C2S_GambleRequest",
                 r: "S2C_GamebleResult",
-                rOpts: {
+                qOpts: {
                     gamble_type: 1,
                     is_ten_times: false
                 }
@@ -731,7 +732,7 @@ es.actions.push(
                 qName: "Rank",
                 q: "C2S_GetRankInfoByTypeRequest",
                 r: "S2C_GetRankInfoByTypeResponse",
-                rOpts: {
+                qOpts: {
                     rank_type: 1,
                     begin_index: 0
                 }
