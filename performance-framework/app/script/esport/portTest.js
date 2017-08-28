@@ -80,7 +80,7 @@ function monitorRequest(opts, cb) {
     var isMonitor = (opts.isMonitor == undefined) ? true : opts.isMonitor;
     var result = null;
     isMonitor && monitor(START, opts.r, '1');
-    console.log('opts.qOpts ' + JSON.stringify(opts.qOpts));
+    // console.log('opts.qOpts ' + JSON.stringify(opts.qOpts));
     es.request(getEProtoId(opts.q + "_ID"),
         Protobuf[opts.qName][opts.q].encode(opts.qOpts),
         getEProtoId(opts.r + "_ID"),
