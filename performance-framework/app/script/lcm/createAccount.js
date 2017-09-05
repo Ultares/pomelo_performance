@@ -13,7 +13,7 @@ var fs = require('fs');
 //};
 
 var getCredential = function () {
-    var rData = []
+    var rData = [];
     var uid = uuid.v4().toUpperCase().split('');
     uid.splice(0, 2, 'gg');
     uid = uid.join('');

@@ -8,6 +8,8 @@ var EsportClient = require('dena-client').esport;
 var Esport = EsportClient.Esport;
 var Protobuf = EsportClient.Protobuf;
 var Buffer = require("buffer")["Buffer"];
+var http = require("http");
+var querystring = require('querystring');
 
 var START = 'start';
 var END = 'end';
@@ -161,6 +163,7 @@ function preRegister() {
 // preRegister();
 
 es.actions.push(
+
     function () {
         if (!es.caseData.previous) {
             return 1;
@@ -174,7 +177,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: '6', // '1' QA
+                        global_server_id: "6", //es.caseData.global_server_id, // '1' QA
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -263,8 +266,8 @@ es.actions.push(
                     funcArray: [
                         EnterInstanceRequest,
                         C2S_SkipBattleRequest,
-                        C2S_LeaveBattle_Instance
-                    ], rate: 4
+                        // C2S_LeaveBattle_Instance
+                    ], rate: 0
                 },
                 Gamble: {
                     funcArray: [
@@ -276,8 +279,8 @@ es.actions.push(
                     funcArray:[
                         C2S_EnterStarGameRequest,
                         C2S_SkipBattleRequest,
-                        C2S_LeaveBattle_Star
-                    ],rate: 4
+                        // C2S_LeaveBattle_Star
+                    ],rate: 0
                 },
                 Glory:{
                     funcArray:[
@@ -285,11 +288,13 @@ es.actions.push(
                         C2S_GloryOpenChapterRequest,
                         C2S_GetCardInfoTeamsRequest,
                         C2S_GloryGameRequest,
-                        C2S_LeaveBattle_Glory
+                        // C2S_LeaveBattle_Glory
                     ],rate: 10
                 },
                 Info: {
                     funcArray: [
+                        C2S_EnterStarGameRequest,
+                        C2S_SkipBattleRequest,
                         C2S_GetCardInfoRequest,
                         C2S_RecruitInfoRequest,
                         C2S_GetBagInfoRequest,
@@ -329,15 +334,15 @@ es.actions.push(
                     C2S_EchoGameS,
                     C2S_AddItem_11005,
                     C2S_GetCardInfoTeamsRequest,
-                    C2S_EnterStarGameRequest,
-                    C2S_SkipBattleRequest,
-                    C2S_LeaveBattle_Star,
-                    C2S_GloryOpenChapterRequest,
-                    C2S_GloryGameRequest,
-                    C2S_LeaveBattle_Glory,
-                    EnterInstanceRequest,
-                    C2S_SkipBattleRequest,
-                    C2S_LeaveBattle_Instance,
+                    // C2S_EnterStarGameRequest,
+                    // C2S_SkipBattleRequest,
+                    // C2S_LeaveBattle_Star,
+                    // C2S_GloryOpenChquest,
+                    // C2S_LeaveBattleapterRequest,
+                    // C2S_GloryGameRe_Glory,
+                    // EnterInstanceRequest,
+                    // C2S_SkipBattleRequest,
+                    // C2S_LeaveBattle_Instance,
                     C2S_GetCardInfoRequest,
                     C2S_RecruitInfoRequest,
                     C2S_GetBagInfoRequest,
@@ -380,7 +385,7 @@ es.actions.push(
                 qOpts: {
                     account: es.caseData.account,
                     platform_id: 'xingluo',
-                    global_server_id: '7',
+                    global_server_id: '6',
                     game_id: '1',
                     platform_session: 'zzzzzzzz'
                 },
