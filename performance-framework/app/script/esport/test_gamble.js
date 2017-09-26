@@ -31,30 +31,6 @@ var genAccount = function () {
     // return uuid.v4().toUpperCase().split('-').join('').slice(0, 20);
 };
 
-//console.log(JSON.stringify(actor));
-
-// var actor = {};
-//
-// actor.actorId = '1';
-// actor.debug = true;
-// actor.server = {
-//    host: '192.168.3.33',
-//    port: 10001
-// };
-//
-// var monitor = function (type, name, reqId) {
-//    if (actor.debug) {
-//        console.info(Array.prototype.slice.call(arguments, 0));
-//        return;
-//    }
-//
-//    if (typeof actor !== 'undefined') {
-//        actor.emit(type, name, reqId);
-//    } else {
-//        console.error(Array.prototype.slice.call(arguments, 0));
-//    }
-// };
-
 es.connect(actor.server, function () {  //actor.server
     es.log(actor.actorId + ' :tcp-socket connect to esServer!');
     es.caseData.previous = true;
@@ -70,36 +46,21 @@ getEProtoId = function (EProtoStr) {
     return Protobuf['MessageID'][mType][EProtoStr];
 };
 
-function getPos(cardNo) {
-    var pos = {};
-    pos['2'] = [1003, 1008, 1012, 1019, 1034, 1041, 1042, 1043, 1044, 1045, 1051, 1053,
-        1057, 1066, 1068, 1077, 1079, 1082, 1084, 1089, 1090, 1093, 1100, 1101];
-    // [1107,
-    // 1111, 1114, 1115, 1116, 1120, 1125, 1128, 1129, 1138, 1145, 1154, 1158, 1163,
-    // 1170, 1174, 1178, 1183, 1187, 1188, 1192];
-    pos['3'] = [1002, 1010, 1011, 1021, 1035, 1037, 1046, 1047, 1048, 1056, 1070, 1078,
-        1085, 1092, 1099];
-    // [1105, 1112, 1123, 1130, 1137, 1143, 1155, 1159, 1164, 1168,
-    //     1175, 1184, 1189, 1193];
-    pos['4'] = [1004, 1006, 1009, 1014, 1015, 1022, 1024, 1029, 1031, 1033, 1036, 1049,
-        1050, 1055, 1058, 1060, 1064, 1069, 1073, 1083, 1088, 1094, 1098];
-    // [1102, 1106,
-    // 1108, 1118, 1122, 1132, 1133, 1134, 1139, 1141, 1149, 1152, 1160, 1165, 1171,
-    // 1176, 1185, 1194]
-    pos['5'] = [1005, 1016, 1018, 1023, 1025, 1026, 1030, 1040, 1054, 1061, 1065, 1067,
-        1071, 1074, 1076, 1081, 1087, 1091, 1095, 1097];
-    // [ 1103, 1109, 1113, 1121, 1131,
-    // 1136, 1140, 1142, 1144, 1147, 1151, 1156, 1161, 1166, 1172, 1177, 1179, 1180,
-    // 1186, 1190, 5005, 5010];
-    for (var k in pos) {
-        // console.log('k-->:' + k);
-        if (pos[k].indexOf(Number(cardNo)) != -1) {
-            return k;
+function read_excel(fn, index){
+    var _index = index || 0;
+    var obj = xlsx.parse(__dirname + '\\' + fn);
+    var info = {};
+    var data = obj[_index].data;
+    for (var j in data){
+        // console.log(j + ' :' + JSON.stringify(data[j]));
+        if (typeof data[j][0] == 'number'){
+            info[data[j][0]] = data[j].slice(1,4);
+            // console.log(j + ' :' + JSON.stringify(data[j]));
         }
     }
-    return '1';
+    // console.log(JSON.stringify(info));
+    return info;
 }
-
 
 es.actions.push(
     function () {
@@ -107,25 +68,31 @@ es.actions.push(
             return 1;
         }
         es.caseData.previous = false;
-        es.log('C2S_AccountVerifyRequest_ID');
         setTimeout(function () {
             es.caseData.account = genAccount();
-            // es.log('es.caseData.account', es.caseData.account);
-            es.request(getEProtoId('C2S_AccountVerifyRequest_ID'),
-                Protobuf['Account']['C2S_AccountVerifyRequest'].encode({
-                    account: es.caseData.account,
-                    platform_id: 'xingluo',
-                    global_server_id: '1',
-                    game_id: '1',
-                    platform_session: 'zzzzzzzz'
+            es.log('C2S_AccountVerifyRequest_ID: ' + es.caseData.account);
+            es.request(32, //getEProtoId('C2S_XlAccountVerifyRequest_ID'),
+                Protobuf['Account']['C2S_XlAccountVerifyRequest'].encode({
+                    request: {
+                        account: es.caseData.account,
+                        platform_id: 'xl',
+                        global_server_id: "5", // '1' QA
+                        game_id: '1',
+                        platform_session: 'zzzzzzzz',
+                        gameRegion: "1area",
+                        accountType: "1",
+                        channel: "xl"
+                    },
+                    key: "xl_sp_key"
                 }),
                 getEProtoId('S2C_AccountVerifyResponse_ID'),
                 function (message) {
                     data = Protobuf['Account']['S2C_AccountVerifyResponse'].decode(message);
-                    console.log('data.length: ' + JSON.stringify(data));
+                    es.log('S2C_AccountVerifyResponse: ' + JSON.stringify(data));
                     if (data.account_info) {
                         es.caseData.account_id = data.account_info.account_id;
                         es.caseData.account_datas = data.account_info['account_datas'];
+                        es.log("es.caseData.account_datas.length: " + es.caseData.account_datas.length);
                     } else {
                         es.caseData.account_datas = [];
                     }
@@ -139,33 +106,39 @@ es.actions.push(
             return 1;
         }
         es.caseData.previous = false;
-        es.log('C2S_CreatePlayerBasicInfoRequest_ID');
         setTimeout(function () {
             if (!es.caseData.account_datas.length) {
-                es.request(getEProtoId('C2S_CreatePlayerBasicInfoRequest_ID'),
-                    Protobuf['PlayerBasic']['C2S_CreatePlayerBasicInfoRequest'].encode({
-                        account_id: es.caseData.account,
-                        icon_id: 1,
-                        name: es.caseData.account.substr(0, 8),
-                        initial_team_index: 1
+                es.request(getEProtoId('C2S_XLCreatePlayerBasicInfoRequest_ID'),
+                    Protobuf['PlayerBasic']['C2S_XLCreatePlayerBasicInfoRequest'].encode({
+                        request: {
+                            account_id: es.caseData.account,
+                            icon_id: 1,
+                            name: es.caseData.account.substr(0, 8),
+                            initial_team_index: 1,
+                            channel: "xl"
+                        },
+                        key: "xl_sp_key"
                     }),
                     getEProtoId('S2C_LoginResponse_ID'),
                     function (message) {
                         data = Protobuf['Player']['S2C_LoginResponse'].decode(message);
+                        es.log('S2C_LoginResponse_ID: ' + JSON.stringify(data));
                         es.caseData.previous = true;
                     }
                 );
             } else {
-                // es.log("es.caseData.account_datas[0]['player_id']: " + es.caseData.account_datas[0]['player_id']);
-                es.request(getEProtoId('C2S_LoginRequest_ID'),
-                    Protobuf['Player']['C2S_LoginRequest'].encode({
-                        account: es.caseData.account,
-                        player_id: es.caseData.account_datas[0]['player_id']
-
+                es.request(getEProtoId('C2S_XLLoginRequest_ID'),
+                    Protobuf['Player']['C2S_XLLoginRequest'].encode({
+                        request: {
+                            account: es.caseData.account,
+                            player_id: es.caseData.account_datas[0]['player_id'],
+                            channel: "xl"
+                        }
                     }),
                     getEProtoId('S2C_LoginResponse_ID'),
                     function (message) {
                         data = Protobuf['Player']['S2C_LoginResponse'].decode(message);
+                        es.log('S2C_LoginResponse_ID: ' + JSON.stringify(data));
                         es.caseData.previous = true;
                     }
                 );
@@ -177,15 +150,11 @@ es.actions.push(
         if (!es.caseData.previous) {
             return 1;
         }
-        //
         if (es.caseData.loopCount <= 0) {
             es.log('es.caseData.loopCount:' + es.caseData.loopCount);
             return undefined;
         }
         es.caseData.previous = false;
-        // es.connect(actor.server, function () {
-        //     es.run();
-        // });
         es.funcseries = [];
         if (es.caseData.ratemode) {
             es.funcmap = {
@@ -292,7 +261,6 @@ es.actions.push(
                 })
         }
 
-
         function C2S_GambleRequest(cb) {
             monitor(START, 'C2S_GambleRequest', '1');
             es.request(getEProtoId('C2S_GambleRequest_ID'),
@@ -315,11 +283,12 @@ es.actions.push(
                     cb();
                 })
         }
-
         return 1;
     },
 
     function () {
+        var fn = "M_Basic_property.xlsx";
+        var info = read_excel(fn);
         var total = 0;
         var pos_count = {
             '1': 0,
@@ -329,15 +298,17 @@ es.actions.push(
             '5': 0
         };
         var data = [];
-        var file = path.resolve('') + '/result/' + es.caseData.account + '_20.xlsx';
+        var file = path.resolve('') + '/result/' + es.caseData.account + '.xlsx';
         es.log('Filename: ' + file);
         es.log(JSON.stringify(es.caseData.gambles));
-
         for (var k  in es.caseData.gambles) {
-            var _k = getPos(k);
-            data.push([Number(k), es.caseData.gambles[k]]);
-            pos_count[_k] += es.caseData.gambles[k];
-            total += es.caseData.gambles[k];
+            if (k in info){
+                data.push([Number(k), es.caseData.gambles[k]]);
+                pos_count[info(k)[2]] += es.caseData.gambles[k];
+                total += es.caseData.gambles[k];
+            }else{
+                console.log('Could not found %s info...',k);
+            }
         }
         console.log('pos_count :' + JSON.stringify(pos_count));
         for (var j  in pos_count) {

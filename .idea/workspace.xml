@@ -2,14 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419e0955-02de-4f77-8f79-b8567905d011" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/performance-framework/app/script/esport/loginServer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/performance-framework/app/script/esport/M_Basic_property.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Activity.proto" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/performance-framework/log/.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/performance-framework/log/1500539928862.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/app/config/env.json" afterPath="$PROJECT_DIR$/performance-framework/app/config/env.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/app/config/esport/config.json" afterPath="$PROJECT_DIR$/performance-framework/app/config/esport/config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/app/config/esport/server.json" afterPath="$PROJECT_DIR$/performance-framework/app/config/esport/server.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/app/script/esport/portTest.js" afterPath="$PROJECT_DIR$/performance-framework/app/script/esport/portTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/app/script/lcm/createAccount.js" afterPath="$PROJECT_DIR$/performance-framework/app/script/lcm/createAccount.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/log/.log" afterPath="$PROJECT_DIR$/performance-framework/log/.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/app/script/esport/test_gamble.js" afterPath="$PROJECT_DIR$/performance-framework/app/script/esport/test_gamble.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/esport.js" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/esport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Account.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Account.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Battle.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Battle.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Card.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Card.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Common.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Common.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Error.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Error.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Gamble.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Gamble.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Glory.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Glory.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/League.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/League.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Player.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Player.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/PlayerBasic.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/PlayerBasic.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Rank.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Rank.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Recruit.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Recruit.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Server.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Server.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Shop.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Shop.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/StarGame.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/StarGame.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Task.proto" afterPath="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Task.proto" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,47 +43,17 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="MessageID.proto" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/MessageID.proto">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="362">
-                    <caret line="149" column="1" lean-forward="true" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="Error.proto" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Error.proto">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="188">
-                    <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="37" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="pomelo_performance" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="esport.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="esport.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/esport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+            <state relative-caret-position="1560">
+              <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -73,8 +62,38 @@
       <file leaf-file-name="portTest.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/portTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="337" column="37" lean-forward="false" selection-start-line="337" selection-start-column="37" selection-end-line="337" selection-end-column="37" />
+            <state relative-caret-position="286">
+              <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginServer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/loginServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="856">
+              <caret line="77" column="24" lean-forward="false" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_gamble.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/test_gamble.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-599">
+              <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.proto" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Client.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,9 +101,15 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>S2C_UpdateResources</find>
       <find>161</find>
       <find>length</find>
       <find>series</find>
@@ -114,6 +139,7 @@
       <find>gamb</find>
       <find>es.actions</find>
       <find>global_server_id</find>
+      <find>248</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,19 +153,20 @@
         <option value="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/node_modules/dena-bytebuffer/index.js" />
         <option value="$PROJECT_DIR$/performance-framework/node_modules/dena-robot/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/ultron/index.js" />
         <option value="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/node_modules/protobufjs/node_modules/bytebuffer/dist/ByteBufferNB.js" />
-        <option value="$PROJECT_DIR$/performance-framework/app/script/esport/test_gamble.js" />
         <option value="$PROJECT_DIR$/performance-framework/app/script/esport/addItems.js" />
         <option value="$PROJECT_DIR$/performance-framework/app/node_modules/client/test.js" />
         <option value="$PROJECT_DIR$/performance-framework/app/script/esport/loginTest.js" />
         <option value="$PROJECT_DIR$/performance-framework/app/config/esport/acc/account.js" />
-        <option value="$PROJECT_DIR$/performance-framework/app/config/esport/server.json" />
-        <option value="$PROJECT_DIR$/performance-framework/app/config/esport/config.json" />
         <option value="$PROJECT_DIR$/performance-framework/app/script/esport/login_server.js" />
         <option value="$PROJECT_DIR$/performance-framework/app/script/lcm/createAccount.js" />
         <option value="$PROJECT_DIR$/performance-framework/app/script/esport/loginServer.js" />
+        <option value="$PROJECT_DIR$/performance-framework/app/config/esport/server.json" />
+        <option value="$PROJECT_DIR$/performance-framework/app/config/esport/config.json" />
         <option value="$PROJECT_DIR$/performance-framework/app/config/env.json" />
-        <option value="$PROJECT_DIR$/performance-framework/app/script/esport/portTest.js" />
         <option value="$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/esport.js" />
+        <option value="$PROJECT_DIR$/performance-framework/app/script/esport/read_excel.js" />
+        <option value="$PROJECT_DIR$/performance-framework/app/script/esport/portTest.js" />
+        <option value="$PROJECT_DIR$/performance-framework/app/script/esport/test_gamble.js" />
       </list>
     </option>
   </component>
@@ -155,10 +182,10 @@
     <handled-path value="$PROJECT_DIR$/performance-framework/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1928" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -175,6 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -457,40 +486,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dena-client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esport-client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="performance-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -514,143 +509,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lcm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="performance-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="performance-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="performance-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="performance-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pomelo_performance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="performance-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esport" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -663,18 +526,18 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\pomelo_performance\performance-framework\app\config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\pomelo_performance\performance-framework\app\script\esport" />
       <recent name="G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\proto" />
+      <recent name="G:\pomelo_performance\performance-framework\app\script\esport" />
       <recent name="G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib" />
       <recent name="G:\pomelo_performance\performance-framework\app\config\esport\acc" />
       <recent name="G:\pomelo_performance\performance-framework\app\script\op" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\pomelo_performance\performance-framework\app\config" />
-    </key>
   </component>
-  <component name="RunManager" selected="Node.js.client">
+  <component name="RunManager" selected="Node.js.test.js">
     <configuration default="false" name="master" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/AppData/Roaming/nvm/v0.10.46/node64" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/performance-framework">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
@@ -881,22 +744,23 @@
       <workItem from="1499307576802" duration="2487000" />
       <workItem from="1500525927142" duration="11583000" />
       <workItem from="1502777293393" duration="38797000" />
-      <workItem from="1503891312478" duration="16820000" />
+      <workItem from="1503891312478" duration="24475000" />
+      <workItem from="1505895594323" duration="8466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213649000" />
+    <option name="totallyTimeSpent" value="229770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24181627" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24128827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46170214" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41222224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -941,22 +805,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/op-client/lib/op.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/debug.js" />
-    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/test.js" />
     <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/gamble.js" />
     <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Item.proto">
       <provider selected="true" editor-type-id="text-editor">
@@ -1016,19 +864,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/test_gamble.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="334" column="0" lean-forward="true" selection-start-line="334" selection-start-column="0" selection-end-line="334" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/addItems.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6136">
           <caret line="236" column="13" lean-forward="true" selection-start-line="236" selection-start-column="13" selection-end-line="236" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,7 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,7 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,7 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,7 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,7 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-267">
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,7 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
           <caret line="131" column="22" lean-forward="true" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,7 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1196">
           <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,7 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,23 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1274">
           <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/loginServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/performance-framework/app/config/env.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,15 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4498">
           <caret line="182" column="21" lean-forward="true" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/performance-framework/app/config/esport/server.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,7 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,15 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/performance-framework/app/config/esport/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1268,7 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,22 +1068,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="149" column="1" lean-forward="true" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performance-framework/app/config/esport/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/portTest.js">
+    <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-robot/lib/agent/actor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="337" column="37" lean-forward="false" selection-start-line="337" selection-start-column="37" selection-end-line="337" selection-end-column="37" />
+        <state relative-caret-position="156">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/esport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        <state relative-caret-position="1560">
+          <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/loginServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="856">
+          <caret line="77" column="24" lean-forward="false" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="628" column="9" lean-forward="false" selection-start-line="628" selection-start-column="9" selection-end-line="628" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/read_excel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performance-framework/app/config/env.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performance-framework/app/config/esport/server.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/portTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performance-framework/app/script/esport/test_gamble.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-599">
+          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performance-framework/node_modules/dena-client/esport-client/lib/proto/Client.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

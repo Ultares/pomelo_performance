@@ -177,7 +177,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "6", //es.caseData.global_server_id, // '1' QA
+                        global_server_id: "5", // '1' QA
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -265,8 +265,7 @@ es.actions.push(
                 Instance: {
                     funcArray: [
                         EnterInstanceRequest,
-                        C2S_SkipBattleRequest,
-                        // C2S_LeaveBattle_Instance
+                        C2S_SkipBattleRequest
                     ], rate: 0
                 },
                 Gamble: {
@@ -278,8 +277,8 @@ es.actions.push(
                 Star:{
                     funcArray:[
                         C2S_EnterStarGameRequest,
-                        C2S_SkipBattleRequest,
-                        // C2S_LeaveBattle_Star
+                        C2S_SkipBattleRequest
+
                     ],rate: 0
                 },
                 Glory:{
@@ -287,8 +286,7 @@ es.actions.push(
                         C2S_AddItem_11005,
                         C2S_GloryOpenChapterRequest,
                         C2S_GetCardInfoTeamsRequest,
-                        C2S_GloryGameRequest,
-                        // C2S_LeaveBattle_Glory
+                        C2S_GloryGameRequest
                     ],rate: 10
                 },
                 Info: {
@@ -340,8 +338,8 @@ es.actions.push(
                     // C2S_GloryOpenChquest,
                     // C2S_LeaveBattleapterRequest,
                     // C2S_GloryGameRe_Glory,
-                    // EnterInstanceRequest,
-                    // C2S_SkipBattleRequest,
+                    EnterInstanceRequest,
+                    C2S_SkipBattleRequest,
                     // C2S_LeaveBattle_Instance,
                     C2S_GetCardInfoRequest,
                     C2S_RecruitInfoRequest,
@@ -385,7 +383,7 @@ es.actions.push(
                 qOpts: {
                     account: es.caseData.account,
                     platform_id: 'xingluo',
-                    global_server_id: '6',
+                    global_server_id: es.caseData.global_server_id,
                     game_id: '1',
                     platform_session: 'zzzzzzzz'
                 },
@@ -394,10 +392,8 @@ es.actions.push(
         }
 
         function CreatePlayerBasicInfoRequest(cb) {
-
             es.caseData.accounts = es.caseData.S2C_AccountVerifyResponse.account_info ?
                 es.caseData.S2C_AccountVerifyResponse.account_info.account_datas : [];
-
             if (!es.caseData.accounts.length) {
                 monitorRequest({
                     qName: "PlayerBasic",
