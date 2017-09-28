@@ -172,12 +172,12 @@ es.actions.push(
         setTimeout(function () {
             es.caseData.account = genAccount();
             es.log('C2S_AccountVerifyRequest_ID: ' + es.caseData.account);
-            es.request(32, //getEProtoId('C2S_XlAccountVerifyRequest_ID'),
+            es.request(getEProtoId('C2S_XlAccountVerifyRequest_ID'), //32,
                 Protobuf['Account']['C2S_XlAccountVerifyRequest'].encode({
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "5", // '1' QA
+                        global_server_id: "2", // '1' QA
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -214,7 +214,7 @@ es.actions.push(
                         request: {
                             account_id: es.caseData.account,
                             icon_id: 1,
-                            name: es.caseData.account.substr(0, 8),
+                            name: es.caseData.account.substr(2, 10),
                             initial_team_index: 1,
                             channel: "xl"
                         },
@@ -247,6 +247,71 @@ es.actions.push(
         }, es.randomIntTime());
     },
 
+    function () {
+        if (!es.caseData.previous) {
+            return 1;
+        }
+        es.caseData.previous = false;
+        setTimeout(function () {
+            monitorRequest({
+                qName: "Item",
+                q: "C2S_AddItem",
+                rName: "Player",
+                r: "S2C_UpdateResources",
+                qOpts: {
+                    item_id: 11003,  // 俱乐部经验
+                    item_count: 16666
+                },
+                isMonitor: false
+            },function(){
+                es.caseData.previous = true;
+            });
+        }, es.randomIntTime());
+    },
+
+    function () {
+        if (!es.caseData.previous) {
+            return 1;
+        }
+        es.caseData.previous = false;
+        setTimeout(function () {
+            monitorRequest({
+                qName: "Item",
+                q: "C2S_AddItem",
+                rName: "Player",
+                r: "S2C_UpdateResources",
+                qOpts: {
+                    item_id: 11005,  // 体力
+                    item_count: 9999
+                },
+                isMonitor: false
+            },function(){
+                es.caseData.previous = true;
+            });
+        }, es.randomIntTime());
+    },
+
+    function () {
+        if (!es.caseData.previous) {
+            return 1;
+        }
+        es.caseData.previous = false;
+        setTimeout(function () {
+            monitorRequest({
+                qName: "Item",
+                q: "C2S_AddItem",
+                rName: "Player",
+                r: "S2C_UpdateResources",
+                qOpts: {
+                    item_id: 11002,  // 钻石
+                    item_count: 9999999
+                },
+                isMonitor: false
+            },function(){
+                es.caseData.previous = true;
+            });
+        }, es.randomIntTime());
+    },
 
     function () {
         if (!es.caseData.previous) {
@@ -329,36 +394,45 @@ es.actions.push(
         } else {
             es.funcArray =
                 [
+
                     C2S_EchoGameS,
-                    C2S_AddItem_11005,
+                    C2S_GetBagInfoRequest,
+                    C2S_SkillInfoRequest,
+                    C2S_GetTalentInfoRequest,
+                    C2S_GetHeroPoolInfo,
                     C2S_GetCardInfoTeamsRequest,
-                    // C2S_EnterStarGameRequest,
+                    C2S_GetResoucesRequest,
+                    C2S_ChatInfoRequest,
+                    C2S_MailInfoRequest,
+                    C2S_TaskInfoRequest,
+                    C2S_GetInstanceRequest,
+                    C2S_GetShopInfoRequest,
                     // C2S_SkipBattleRequest,
                     // C2S_LeaveBattle_Star,
                     // C2S_GloryOpenChquest,
                     // C2S_LeaveBattleapterRequest,
                     // C2S_GloryGameRe_Glory,
                     EnterInstanceRequest,
-                    C2S_SkipBattleRequest,
+                    // C2S_SkipBattleRequest,
                     // C2S_LeaveBattle_Instance,
                     C2S_GetCardInfoRequest,
                     C2S_RecruitInfoRequest,
-                    C2S_GetBagInfoRequest,
-                    C2S_GetShopInfoRequest,
                     C2S_EchoGameS,
                     C2S_TeamPropertyRequest,
                     C2S_GetCardInfoPositionsRequest,
-                    C2S_GetHeroPoolInfo,
                     C2S_GloryInfoRequest,
-                    C2S_MailInfoRequest,
-                    C2S_TaskInfoRequest,
-                    C2S_AddItem_11002,
-                    C2S_GambleRequest
+                    C2S_GambleRequest,
+                    C2S_ChatRequest
                 ];
         }
         es.funcArray.forEach(function (element, index, array) {
+            // es.log('element name:' + element.name);
+            var _waitingTime = es.randomIntTime();
+            if (element.name == 'C2S_SkipBattleRequest'){
+                _waitingTime += 32000;
+            }
             var func = function (cb) {
-                setTimeout(element, es.randomIntTime(), cb);
+                setTimeout(element, _waitingTime, cb);
             };
             es.funcseries.push(func)
         });
@@ -421,6 +495,15 @@ es.actions.push(
             }
         }
 
+        function C2S_GetTalentInfoRequest(cb) {
+            monitorRequest({
+                qName: "Talent",
+                q: "C2S_GetTalentInfoRequest",
+                r: "S2C_GetTalentInfoResponse",
+                qOpts: {}
+            }, cb);
+        }
+
         function C2S_GetCardInfoPositionsRequest(cb) {
             monitorRequest({
                 qName: "Card",
@@ -450,34 +533,6 @@ es.actions.push(
                     count: 1,
                     shop_type: 102
                 }
-            }, cb);
-        }
-
-        function C2S_AddItem_11002(cb) {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11002,  // 11002
-                    item_count: 200
-                },
-                isMonitor: false
-            }, cb);
-        }
-
-        function C2S_AddItem_11005(cb) {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11005,  // 11002
-                    item_count: 22
-                },
-                isMonitor: false
             }, cb);
         }
 
@@ -661,10 +716,19 @@ es.actions.push(
                 r: "S2C_ChatInfoResponse",
                 qOpts: {
                     channel_type: 1,
-                    channel_idx: 0,
+                    channel_idx: -1,
                     last_time: 0,
                     index: 0
                 }
+            }, cb);
+        }
+
+        function C2S_SkillInfoRequest(cb) {
+            monitorRequest({
+                qName: "Skill",
+                q: "C2S_SkillInfoRequest",
+                r: "S2C_SkillInfoResponse",
+                qOpts: {}
             }, cb);
         }
 
@@ -676,7 +740,7 @@ es.actions.push(
                 r: "S2C_ChatResponse",
                 qOpts: {
                     channel_type: 1,
-                    channel_idx: 1,
+                    channel_idx: 0,
                     chat_base: {
                         chat_str: hello,
                         type: 1,
@@ -711,7 +775,7 @@ es.actions.push(
             monitorRequest({
                 qName: "Instance",
                 q: "C2S_GetInstanceRequest",
-                r: "S2C_GetInstanceResponse ",
+                r: "S2C_GetInstanceResponse",
                 qOpts: {}
             }, cb);
         }
@@ -817,7 +881,6 @@ es.actions.push(
             }
         }
 
-
         function C2S_BattleTacticOptionRequest(cb) {
             monitorRequest({
                 qName: "Battle",
@@ -874,15 +937,6 @@ es.actions.push(
                 q: "C2S_LeaveBattle",
                 rName: "Instance",
                 r: "S2C_InstanceFinishResponse",
-                qOpts: {}
-            }, cb);
-        }
-
-        function C2S_GetTalentInfoRequest(cb) {
-            monitorRequest({
-                qName: "Talent",
-                q: "C2S_GetTalentInfoRequest",
-                r: "S2C_GetTalentInfoResponse",
                 qOpts: {}
             }, cb);
         }

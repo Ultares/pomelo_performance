@@ -37,6 +37,43 @@ es.connect(actor.server, function () {  //actor.server
     es.run();
 });
 
+function monitorRequest(opts, cb) {
+    var isMonitor = (opts.isMonitor == undefined) ? true : opts.isMonitor;
+    var result = null;
+    isMonitor && monitor(START, opts.r, '1');
+    // console.log('opts.qOpts ' + JSON.stringify(opts.qOpts));
+    es.request(getEProtoId(opts.q + "_ID"),
+        Protobuf[opts.qName][opts.q].encode(opts.qOpts),
+        getEProtoId(opts.r + "_ID"),
+        function (message) {
+            isMonitor && monitor(END, opts.r, '1');
+            data = opts.rName ? Protobuf[opts.rName][opts.r].decode(message) :
+                Protobuf[opts.qName][opts.r].decode(message);
+            es.unregister(getEProtoId(opts.r + "_ID"));
+            opts.sr && (es.caseData[opts.r] = data) && es.log(opts.r + ': ' + JSON.stringify(es.caseData[opts.r]));
+            opts.sr || es.log(opts.r + ': ' + JSON.stringify(data));
+            // error_code  res result
+            if ('error_code' in data)
+            {
+                result = data['error_code'];
+            }else if('res' in data)
+            {
+                result = data['res'];
+            }else if('result' in data)
+            {
+                result = data['result'];
+            }else {
+                result = undefined;
+            }
+            if (result != undefined && result != 0 && result != null){
+                es.log(es.caseData.account + ' [' + opts.q + '] got error code: [' + result + '] ' + JSON.stringify(data), 'error');
+            }
+            opts = undefined;
+            cb();
+        }
+    );
+}
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -48,7 +85,7 @@ getEProtoId = function (EProtoStr) {
 
 function read_excel(fn, index){
     var _index = index || 0;
-    var obj = xlsx.parse(__dirname + '\\' + fn);
+    var obj = xlsx.parse(path.resolve('') + '\\' + fn);
     var info = {};
     var data = obj[_index].data;
     for (var j in data){
@@ -76,7 +113,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "5", // '1' QA
+                        global_server_id: "1", // '1' QA
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -190,7 +227,7 @@ es.actions.push(
             es.funcArray =
                 [
                     C2S_GetShopInfoRequest,
-                    C2S_BuyShopItemRequest,
+                    C2S_AddItem_11002,
                     C2S_GambleRequest
                 ];
         }
@@ -212,6 +249,20 @@ es.actions.push(
                 }
             }
         );
+
+        function C2S_AddItem_11002(cb) {
+            monitorRequest({
+                qName: "Item",
+                q: "C2S_AddItem",
+                rName: "Player",
+                r: "S2C_UpdateResources",
+                qOpts: {
+                    item_id: 11002,  // 11002  11003 俱乐部经验
+                    item_count: 2000
+                },
+                // isMonitor: false
+            }, cb);
+        }
 
 
         function C2S_EchoGameS(cb) {
@@ -265,17 +316,17 @@ es.actions.push(
             monitor(START, 'C2S_GambleRequest', '1');
             es.request(getEProtoId('C2S_GambleRequest_ID'),
                 Protobuf['Gamble']['C2S_GambleRequest'].encode({
-                    gamble_type: 2,
-                    is_ten_times: false
+                    gamble_type: 1,
+                    is_ten_times: true
                 }),
                 getEProtoId('S2C_GamebleResult_ID'),
                 function (message) {
                     monitor(END, 'C2S_GambleRequest', '1');
                     data = Protobuf['Gamble']['S2C_GamebleResult'].decode(message);
-                    // es.log('Gamble data :' + JSON.stringify(data));
-                    // es.log('Gamble data :' + JSON.stringify(data.items));
+                    es.log('Gamble data :' + JSON.stringify(data));
+                    es.log('Gamble data :' + JSON.stringify(data.items));
                     data.items.forEach(function (e) {
-                        // es.log('e: ' + e.item_id);
+                        es.log('e: ' + e.item_id);
                         var k = e.item_id;
                         es.caseData.gambles[k] = (k in es.caseData.gambles) ? (es.caseData.gambles[k] + 1) : 1;
                     });
@@ -289,6 +340,7 @@ es.actions.push(
     function () {
         var fn = "M_Basic_property.xlsx";
         var info = read_excel(fn);
+        es.log(JSON.stringify(info));
         var total = 0;
         var pos_count = {
             '1': 0,
@@ -297,14 +349,22 @@ es.actions.push(
             '4': 0,
             '5': 0
         };
+        var qos_count = {
+            "S+": 0,
+            "S": 0,
+            "A": 0
+        };
         var data = [];
         var file = path.resolve('') + '/result/' + es.caseData.account + '.xlsx';
         es.log('Filename: ' + file);
         es.log(JSON.stringify(es.caseData.gambles));
         for (var k  in es.caseData.gambles) {
+            es.log(JSON.stringify('es.caseData.gambles:  ' + k));
             if (k in info){
+                es.log(JSON.stringify('qos_count[info[k][1]]:  ' + qos_count[info[k][1]]));
                 data.push([Number(k), es.caseData.gambles[k]]);
-                pos_count[info(k)[2]] += es.caseData.gambles[k];
+                pos_count[info[k][2]] += es.caseData.gambles[k];
+                qos_count[info[k][1]] += es.caseData.gambles[k];
                 total += es.caseData.gambles[k];
             }else{
                 console.log('Could not found %s info...',k);
@@ -314,6 +374,10 @@ es.actions.push(
         for (var j  in pos_count) {
             data.push([Number(j), pos_count[j]]);
         }
+        for (var q  in qos_count) {
+            data.push([q, qos_count[q]]);
+        }
+
         data.push(['total', total]);
         var buffer = xlsx.build([{name: es.caseData.account, data: data}]);
         fs.writeFile(file, buffer, 'binary', {flag: 'a+'});
