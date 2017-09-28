@@ -177,7 +177,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "2", // '1' QA
+                        global_server_id: "9", // '1' QA
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -253,65 +253,84 @@ es.actions.push(
         }
         es.caseData.previous = false;
         setTimeout(function () {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11003,  // 俱乐部经验
-                    item_count: 66666
-                },
-                // isMonitor: false
-            },function(){
-                es.caseData.previous = true;
-            });
+                es.request(getEProtoId('C2S_ActivityInfoRequest_ID'),
+                    Protobuf['Activity']['C2S_ActivityInfoRequest'].encode({
+                    }),
+                    getEProtoId('S2C_ActivityInfoResponse_ID'),
+                    function (message) {
+                        data = Protobuf['Activity']['S2C_ActivityInfoResponse'].decode(message);
+                        es.log('S2C_ActivityInfoResponse: ' + JSON.stringify(data));
+                        es.caseData.previous = true;
+                    }
+                );
         }, es.randomIntTime());
     },
 
-    function () {
-        if (!es.caseData.previous) {
-            return 1;
-        }
-        es.caseData.previous = false;
-        setTimeout(function () {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11005,  // 体力
-                    item_count: 9999
-                },
-                // isMonitor: false
-            },function(){
-                es.caseData.previous = true;
-            });
-        }, es.randomIntTime());
-    },
-
-    function () {
-        if (!es.caseData.previous) {
-            return 1;
-        }
-        es.caseData.previous = false;
-        setTimeout(function () {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11002,  // 钻石
-                    item_count: 9999999
-                },
-                // isMonitor: false
-            },function(){
-                es.caseData.previous = true;
-            });
-        }, es.randomIntTime());
-    },
+    // function () {
+    //     if (!es.caseData.previous) {
+    //         return 1;
+    //     }
+    //     es.caseData.previous = false;
+    //     setTimeout(function () {
+    //         monitorRequest({
+    //             qName: "Item",
+    //             q: "C2S_AddItem",
+    //             rName: "Player",
+    //             r: "S2C_UpdateResources",
+    //             qOpts: {
+    //                 item_id: 11003,  // 俱乐部经验
+    //                 item_count: 66666
+    //             },
+    //             // isMonitor: false
+    //         },function(){
+    //             es.caseData.previous = true;
+    //         });
+    //     }, es.randomIntTime());
+    // },
+    //
+    // function () {
+    //     if (!es.caseData.previous) {
+    //         return 1;
+    //     }
+    //     es.caseData.previous = false;
+    //     setTimeout(function () {
+    //         monitorRequest({
+    //             qName: "Item",
+    //             q: "C2S_AddItem",
+    //             rName: "Player",
+    //             r: "S2C_UpdateResources",
+    //             qOpts: {
+    //                 item_id: 11005,  // 体力
+    //                 item_count: 9999
+    //             },
+    //             // isMonitor: false
+    //         },function(){
+    //             es.caseData.previous = true;
+    //         });
+    //     }, es.randomIntTime());
+    // },
+    //
+    // function () {
+    //     if (!es.caseData.previous) {
+    //         return 1;
+    //     }
+    //     es.caseData.previous = false;
+    //     setTimeout(function () {
+    //         monitorRequest({
+    //             qName: "Item",
+    //             q: "C2S_AddItem",
+    //             rName: "Player",
+    //             r: "S2C_UpdateResources",
+    //             qOpts: {
+    //                 item_id: 11002,  // 钻石
+    //                 item_count: 9999999
+    //             },
+    //             // isMonitor: false
+    //         },function(){
+    //             es.caseData.previous = true;
+    //         });
+    //     }, es.randomIntTime());
+    // },
 
     function () {
         setTimeout(function () {
