@@ -4,7 +4,7 @@
 var fs = require('fs');
 
 var filename = 'gamble.json';
-var pre = 'apple_';
+var pre = 'renew_';
 
 function genAccount(count) {
     var i = 0;
