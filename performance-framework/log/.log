@@ -29,4 +29,8 @@ ReferenceError: __dirname is not defined
     at null.fn (evalmachine.<anonymous>:360:27)
     at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\esport-client\lib\esport.js:77:18)
     at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'encode' of undefined
+    at monitorRequest (evalmachine.<anonymous>:46:38)
+    at C2S_RotateDishRequest (evalmachine.<anonymous>:285:13)
+    at timer._onTimeout (timers.js:228:16)
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)

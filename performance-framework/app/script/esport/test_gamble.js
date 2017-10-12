@@ -113,7 +113,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "1", // '1' QA
+                        global_server_id: "2", // '1' QA  //2 andPre 9 GQQ
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -228,7 +228,10 @@ es.actions.push(
                 [
                     C2S_GetShopInfoRequest,
                     C2S_AddItem_11002,
-                    C2S_GambleRequest
+                    C2S_RotateDishRequest,
+                    // C2S_GambleRequest,
+                    // EnterInstanceRequest
+
                 ];
         }
         es.funcArray.forEach(function (element, index, array) {
@@ -264,6 +267,31 @@ es.actions.push(
             }, cb);
         }
 
+        function EnterInstanceRequest(cb) {
+            es.caseData.instance_id = 100101;
+            monitorRequest({
+                qName: "Instance",
+                q: "C2S_EnterInstanceRequest",
+                rName: "Battle",
+                r: "S2C_EnterBattle",
+                qOpts: {
+                    instance_id: es.caseData.instance_id
+                }
+            }, cb);
+        }
+
+        function C2S_RotateDishRequest(cb) {
+            // es.caseData.instance_id = 100101;
+            monitorRequest({
+                qName: "ExchangeCenter",
+                q: "C2S_RotateDishRequest",
+                r: "S2C_RotateDishResponse",
+                qOpts: {
+                    type: 2,
+                    dial_id: 1
+                }
+            }, cb);
+        }
 
         function C2S_EchoGameS(cb) {
 
@@ -317,7 +345,7 @@ es.actions.push(
             es.request(getEProtoId('C2S_GambleRequest_ID'),
                 Protobuf['Gamble']['C2S_GambleRequest'].encode({
                     gamble_type: 1,
-                    is_ten_times: true
+                    is_ten_times: false
                 }),
                 getEProtoId('S2C_GamebleResult_ID'),
                 function (message) {
