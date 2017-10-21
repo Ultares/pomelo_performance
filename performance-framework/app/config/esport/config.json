@@ -6,5 +6,8 @@
     "interval": 100
   },
   "account": "gamble.json",
-  "server": "Stress"
+  "acIndex": 1000,
+  "server": "Dev"
+
+
 }
