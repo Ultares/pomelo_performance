@@ -177,7 +177,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "6", // '1' QA  6
+                        global_server_id: "1", // '1' QA  6
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -257,7 +257,7 @@ es.actions.push(
                 qName: "Item",
                 q: "C2S_AddItem",
                 rName: "Player",
-                r: "S2C_UpdateResources",
+                r: "S2C_UpdateBasicInfo",
                 qOpts: {
                     item_id: 11003,  // 俱乐部经验
                     item_count: 16666
@@ -396,32 +396,32 @@ es.actions.push(
                 [
 
                     C2S_EchoGameS,
-                    C2S_GetBagInfoRequest,
-                    C2S_SkillInfoRequest,
-                    C2S_GetTalentInfoRequest,
-                    C2S_GetHeroPoolInfo,
-                    C2S_GetCardInfoTeamsRequest,
-                    C2S_GetResoucesRequest,
+                    // C2S_GetBagInfoRequest,
+                    // C2S_SkillInfoRequest,
+                    // C2S_GetTalentInfoRequest,
+                    // C2S_GetHeroPoolInfo,
+                    // C2S_GetCardInfoTeamsRequest,
+                    // C2S_GetResoucesRequest,
                     C2S_ChatInfoRequest,
-                    C2S_MailInfoRequest,
-                    C2S_TaskInfoRequest,
-                    C2S_GetInstanceRequest,
-                    C2S_GetShopInfoRequest,
+                    // C2S_MailInfoRequest,
+                    // C2S_TaskInfoRequest,
+                    // C2S_GetInstanceRequest,
+                    // C2S_GetShopInfoRequest,
                     // C2S_SkipBattleRequest,
                     // C2S_LeaveBattle_Star,
                     // C2S_GloryOpenChquest,
                     // C2S_LeaveBattleapterRequest,
                     // C2S_GloryGameRe_Glory,
-                    EnterInstanceRequest,
+                    // EnterInstanceRequest,
                     // C2S_SkipBattleRequest,
                     // C2S_LeaveBattle_Instance,
-                    C2S_GetCardInfoRequest,
-                    C2S_RecruitInfoRequest,
-                    C2S_EchoGameS,
-                    C2S_TeamPropertyRequest,
-                    C2S_GetCardInfoPositionsRequest,
-                    C2S_GloryInfoRequest,
-                    C2S_GambleRequest,
+                    // C2S_GetCardInfoRequest,
+                    // C2S_RecruitInfoRequest,
+                    // C2S_EchoGameS,
+                    // C2S_TeamPropertyRequest,
+                    // C2S_GetCardInfoPositionsRequest,
+                    // C2S_GloryInfoRequest,
+                    // C2S_GambleRequest,
                     C2S_ChatRequest
                 ];
         }
