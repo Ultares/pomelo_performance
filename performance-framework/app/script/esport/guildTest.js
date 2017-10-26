@@ -10,6 +10,9 @@ var Protobuf = EsportClient.Protobuf;
 var Buffer = require("buffer")["Buffer"];
 var http = require("http");
 var querystring = require('querystring');
+var fs = require('fs');
+var xlsx = require('node-xlsx');
+var path = require('path');
 
 var START = 'start';
 var END = 'end';
@@ -46,12 +49,11 @@ var genAccount = function () {
 };
 
 var createOrAdd = function () {
-    console.log('Result :%s', Number(actor.actorId.split('_')[1])/50);
-    return Number(actor.actorId.split('_')[1])/50
+    console.log('Result :%s', Number(actor.actorId.split('_')[1]) / 50);
+    return Number(actor.actorId.split('_')[1]) / 50
 };
 
 // createOrAdd();
-
 
 
 // var monitor = function (type, name, reqId) {
@@ -134,7 +136,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "1", // '1' QA  6
+                        global_server_id: "9", // '1' QA  9 Dev
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -225,50 +227,50 @@ es.actions.push(
             });
         }, es.randomIntTime());
     },
-
-    function () {
-        if (!es.caseData.previous) {
-            return 1;
-        }
-        es.caseData.previous = false;
-        setTimeout(function () {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11005,  // 体力
-                    item_count: 9999
-                },
-                isMonitor: false
-            }, function () {
-                es.caseData.previous = true;
-            });
-        }, es.randomIntTime());
-    },
-
-    function () {
-        if (!es.caseData.previous) {
-            return 1;
-        }
-        es.caseData.previous = false;
-        setTimeout(function () {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11002,  // 钻石
-                    item_count: 9999
-                },
-                isMonitor: false
-            }, function () {
-                es.caseData.previous = true;
-            });
-        }, es.randomIntTime());
-    },
+    //
+    // function () {
+    //     if (!es.caseData.previous) {
+    //         return 1;
+    //     }
+    //     es.caseData.previous = false;
+    //     setTimeout(function () {
+    //         monitorRequest({
+    //             qName: "Item",
+    //             q: "C2S_AddItem",
+    //             rName: "Player",
+    //             r: "S2C_UpdateResources",
+    //             qOpts: {
+    //                 item_id: 11005,  // 体力
+    //                 item_count: 9999
+    //             },
+    //             isMonitor: false
+    //         }, function () {
+    //             es.caseData.previous = true;
+    //         });
+    //     }, es.randomIntTime());
+    // },
+    //
+    // function () {
+    //     if (!es.caseData.previous) {
+    //         return 1;
+    //     }
+    //     es.caseData.previous = false;
+    //     setTimeout(function () {
+    //         monitorRequest({
+    //             qName: "Item",
+    //             q: "C2S_AddItem",
+    //             rName: "Player",
+    //             r: "S2C_UpdateResources",
+    //             qOpts: {
+    //                 item_id: 11002,  // 钻石
+    //                 item_count: 99999
+    //             },
+    //             isMonitor: false
+    //         }, function () {
+    //             es.caseData.previous = true;
+    //         });
+    //     }, es.randomIntTime());
+    // },
 
     function () {
         if (!es.caseData.previous) {
@@ -312,25 +314,22 @@ es.actions.push(
                     // C2S_GuildCreateRequest,       // 创建公会
                     // C2S_GuildEditRequest,         // 修改公会信息
                     // C2S_GuildModifyRequest,       // 操作公会成员
-                    C2S_GuildListRequest,         // 获取公会列表
+                    // C2S_GuildListRequest,         // 获取公会列表
                     // C2S_GuildSearchRequest,       // 搜索公会
                     // C2S_GuildRecruitListRequest,  // 招新列表
                     // C2S_GuildRecruitRequest,      // 邀请玩家入会
-                    C2S_GuildApplyRequest,        // 申请进入公会
+                    // C2S_GuildApplyRequest,        // 申请进入公会
                     // C2S_GuildApplyEditRequest,    // 操作入会申请
                     // C2S_GuildQuitRequest,         // 退出公会
-                    // C2S_GuildGiftInfoRequest,     // 获取红包信息
                     // C2S_GuildSendGiftRequest,     // 发红包
-                    // C2S_GuildReceiveGiftRequest   // 收红包
+                    C2S_GuildGiftInfoRequest,     // 获取红包信息
+                    C2S_GuildReceiveGiftRequest   // 收红包
 
 
                 ];
         }
         es.funcArray.forEach(function (element, index, array) {
             var _waitingTime = es.randomIntTime();
-            if (element.name == 'C2S_SkipBattleRequest') {
-                _waitingTime += 32000;
-            }
             var func = function (cb) {
                 setTimeout(element, _waitingTime, cb);
             };
@@ -470,7 +469,7 @@ es.actions.push(
                 q: "C2S_GuildApplyRequest",
                 r: "S2C_GuildApplyResponse",
                 qOpts: {
-                    guild_uid: {"low":-1599275007,"high":88553,"unsigned":true},
+                    guild_uid: {"low":-327548927,"high":612842,"unsigned":true},
                     is_cancel: false
                 }
             }, cb);
@@ -503,11 +502,13 @@ es.actions.push(
                 qName: "Guild",
                 q: "C2S_GuildGiftInfoRequest",
                 r: "S2C_GuildGiftInfoResponse",
+                sr: true,
                 qOpts: {}
             }, cb);
         }
 
         function C2S_GuildSendGiftRequest(cb) {
+
             monitorRequest({
                 qName: "Guild",
                 q: "C2S_GuildSendGiftRequest",
@@ -519,15 +520,44 @@ es.actions.push(
         }
 
         function C2S_GuildReceiveGiftRequest(cb) {
-            monitorRequest({
-                qName: "Guild",
-                q: "C2S_GuildReceiveGiftRequest",
-                r: "S2C_GuildReceiveGiftResponse",
-                qOpts: {
-                    gift_id: 1
-                }
-            }, cb);
+            var gifts = es.caseData.S2C_GuildGiftInfoResponse.gifts.length;
+            es.caseData.gift_uid = es.caseData.S2C_GuildGiftInfoResponse.gifts[gifts-1].uid;
+            monitor(START, 'C2S_GuildReceiveGiftRequest', '1');
+            es.request(getEProtoId('C2S_GuildReceiveGiftRequest_ID'),
+                Protobuf['Guild']['C2S_GuildReceiveGiftRequest'].encode({
+                    gift_uid: es.caseData.gift_uid
+                }),
+                getEProtoId('S2C_GuildReceiveGiftResponse_ID'),
+                function (message) {
+                    monitor(END, 'C2S_GuildReceiveGiftRequest', '1');
+                    data = Protobuf['Guild']['S2C_GuildReceiveGiftResponse'].decode(message);
+                    es.log('S2C_GuildReceiveGiftResponse: ' + JSON.stringify(data));
+                    // {"error_code":0,"item":{"uid":{"low":-233963519,"high":88553,"unsigned":true},"item_id":31017,"count":3,"get_time":null}}
+                    var k = data.item.item_id;
+                    var v = data.item.count;
+                    es.caseData.gifts[k] = (k in es.caseData.gifts) ? (es.caseData.gifts[k] + v) : v;
+                    es.unregister(getEProtoId('S2C_GuildReceiveGiftResponse_ID'));
+                    // console.log('es.caseData.loopCount: ' + es.caseData.loopCount);
+                    // console.log('es.caseData.gifts: ' + JSON.stringify(es.caseData.gifts));
+                    cb();
+                })
         }
+
+        // function C2S_GuildReceiveGiftRequest(cb) {
+        //     // es.log('gift_uid:' + JSON.stringify(es.caseData.S2C_GuildGiftInfoResponse.gifts));
+        //     var gifts = es.caseData.S2C_GuildGiftInfoResponse.gifts.length;
+        //     es.caseData.gift_uid = es.caseData.S2C_GuildGiftInfoResponse.gifts[gifts-1].uid;
+        //     // es.log('gift_uid:' + es.caseData.S2C_GuildGiftInfoResponse.gifts[gifts-1].uid);
+        //     monitorRequest({
+        //         qName: "Guild",
+        //         q: "C2S_GuildReceiveGiftRequest",
+        //         r: "S2C_GuildReceiveGiftResponse",
+        //         sr: true,
+        //         qOpts: {
+        //             gift_uid: es.caseData.gift_uid
+        //         }
+        //     }, cb);
+        // }
 
         function C2S_GuildRecruitListRequest(cb) {
             monitorRequest({
@@ -542,8 +572,20 @@ es.actions.push(
     },
 
     function () {
-        setTimeout(function () {
-            console.log('Clear timer!')
-        }, es.caseData.responseOverTime);
+
+        var total = 0;
+        var data = [];
+        var file = path.resolve('') + '/result/' + es.caseData.account + '.xlsx';
+        console.log('es.caseData.account: [%s] [%s]',es.caseData.account,JSON.stringify(es.caseData.gifts));
+        for (var k  in es.caseData.gifts) {
+            // es.log(JSON.stringify('es.caseData.gifts:  ' + k));
+                data.push([Number(k), es.caseData.gifts[k]]);
+                total += es.caseData.gifts[k];
+        }
+        data.push(['total', total]);
+        var buffer = xlsx.build([{name: es.caseData.account, data: data}]);
+        fs.writeFile(file, buffer, 'binary', {flag: 'a+'});
+        console.log('Clear timer!');
+        // }, es.caseData.responseOverTime);
     }
 );
