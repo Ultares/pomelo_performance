@@ -113,7 +113,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "2", // '1' QA  //2 andPre 9 GQQ
+                        global_server_id: "1", // '1' QA  //2 andPre 9 GQQ
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -228,8 +228,8 @@ es.actions.push(
                 [
                     C2S_GetShopInfoRequest,
                     C2S_AddItem_11002,
-                    C2S_RotateDishRequest,
-                    // C2S_GambleRequest,
+                    // C2S_RotateDishRequest,
+                    C2S_GambleRequest,
                     // EnterInstanceRequest
 
                 ];
@@ -344,8 +344,8 @@ es.actions.push(
             monitor(START, 'C2S_GambleRequest', '1');
             es.request(getEProtoId('C2S_GambleRequest_ID'),
                 Protobuf['Gamble']['C2S_GambleRequest'].encode({
-                    gamble_type: 1,
-                    is_ten_times: false
+                    gamble_type: 1,  //51-57
+                    is_ten_times: true
                 }),
                 getEProtoId('S2C_GamebleResult_ID'),
                 function (message) {
@@ -356,6 +356,9 @@ es.actions.push(
                     data.items.forEach(function (e) {
                         es.log('e: ' + e.item_id);
                         var k = e.item_id;
+                        if ( Number(k) in [Number(1188),Number(1161),Number(1165)] ){
+                            console.log("%s Got 1165: %s",es.caseData.account,k)
+                        }
                         es.caseData.gambles[k] = (k in es.caseData.gambles) ? (es.caseData.gambles[k] + 1) : 1;
                     });
                     es.unregister(getEProtoId('S2C_GamebleResult_ID'));
@@ -381,7 +384,7 @@ es.actions.push(
             "S+": 0,
             "S": 0,
             "A": 0
-        };
+        }; //1188 Gogoing 866
         var data = [];
         var file = path.resolve('') + '/result/' + es.caseData.account + '.xlsx';
         es.log('Filename: ' + file);
@@ -405,7 +408,10 @@ es.actions.push(
         for (var q  in qos_count) {
             data.push([q, qos_count[q]]);
         }
-
+        // for (var q  in es.caseData.gambles) {
+        //     data.push([q, es.caseData.gambles[q]]);
+        // }
+        //
         data.push(['total', total]);
         var buffer = xlsx.build([{name: es.caseData.account, data: data}]);
         fs.writeFile(file, buffer, 'binary', {flag: 'a+'});
