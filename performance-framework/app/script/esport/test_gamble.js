@@ -113,7 +113,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "1", // '1' QA  //2 andPre 9 GQQ
+                        global_server_id: "46", // '1' QA  //2 andPre 9 GQQ
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -260,7 +260,7 @@ es.actions.push(
                 rName: "Player",
                 r: "S2C_UpdateResources",
                 qOpts: {
-                    item_id: 11002,  // 11002  11003 俱乐部经验
+                    item_id: 11002,  // 11010 极品签约函 11002  11003 俱乐部经验
                     item_count: 2000
                 },
                 // isMonitor: false
@@ -344,7 +344,7 @@ es.actions.push(
             monitor(START, 'C2S_GambleRequest', '1');
             es.request(getEProtoId('C2S_GambleRequest_ID'),
                 Protobuf['Gamble']['C2S_GambleRequest'].encode({
-                    gamble_type: 1,  //51-57
+                    gamble_type: 1,  //51-57  2 极品签约函
                     is_ten_times: true
                 }),
                 getEProtoId('S2C_GamebleResult_ID'),
