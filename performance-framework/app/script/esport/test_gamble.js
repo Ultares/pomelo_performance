@@ -11,6 +11,9 @@ var Esport = EsportClient.Esport;
 var Protobuf = EsportClient.Protobuf;
 var path = require('path');
 
+var FNS = ["M_Basic_property.xlsx","M_drop.xlsx","M_Items_pool.xlsx"];
+var EXCELS_DIR= "F:/XLEsports/design/System Value/ForGame/";
+
 var START = 'start';
 var END = 'end';
 
@@ -85,7 +88,7 @@ getEProtoId = function (EProtoStr) {
 
 function read_excel(fn, index){
     var _index = index || 0;
-    var obj = xlsx.parse(path.resolve('') + '\\' + fn);
+    var obj = xlsx.parse(fn);
     var info = {};
     var data = obj[_index].data;
     for (var j in data){
@@ -113,7 +116,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "46", // '1' QA  //2 andPre 9 GQQ
+                        global_server_id: "47", // '1' QA  //2 andPre 9 GQQ
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -150,7 +153,7 @@ es.actions.push(
                         request: {
                             account_id: es.caseData.account,
                             icon_id: 1,
-                            name: es.caseData.account.substr(0, 8),
+                            name: es.caseData.account.substr(1, 9),
                             initial_team_index: 1,
                             channel: "xl"
                         },
@@ -344,7 +347,7 @@ es.actions.push(
             monitor(START, 'C2S_GambleRequest', '1');
             es.request(getEProtoId('C2S_GambleRequest_ID'),
                 Protobuf['Gamble']['C2S_GambleRequest'].encode({
-                    gamble_type: 1,  //51-57  2 极品签约函
+                    gamble_type: 13,  //51-57  2 极品签约函
                     is_ten_times: true
                 }),
                 getEProtoId('S2C_GamebleResult_ID'),
@@ -369,8 +372,7 @@ es.actions.push(
     },
 
     function () {
-        var fn = "M_Basic_property.xlsx";
-        var info = read_excel(fn);
+        var info = read_excel(EXCELS_DIR + FNS[0]);
         es.log(JSON.stringify(info));
         var total = 0;
         var pos_count = {

@@ -6,6 +6,6 @@
     "interval": 100
   },
   "account": "gamble.json",
-  "acIndex": 9200,
-  "server": "Pre"
+  "acIndex": 1000,
+  "server": "IPre"
 }
