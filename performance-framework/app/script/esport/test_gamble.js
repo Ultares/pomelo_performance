@@ -347,7 +347,7 @@ es.actions.push(
             monitor(START, 'C2S_GambleRequest', '1');
             es.request(getEProtoId('C2S_GambleRequest_ID'),
                 Protobuf['Gamble']['C2S_GambleRequest'].encode({
-                    gamble_type: 13,  //51-57  2 极品签约函
+                    gamble_type: 6,  //51-57  2 极品签约函
                     is_ten_times: true
                 }),
                 getEProtoId('S2C_GamebleResult_ID'),

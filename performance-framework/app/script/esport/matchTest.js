@@ -278,7 +278,7 @@ es.actions.push(
             return undefined;
         }
         // es.log('es.caseData.loopCount:' + es.caseData.loopCount);
-        es.close();
+
         es.connect(actor.server, function () {
         });
         es.caseData.previous = false;
@@ -332,7 +332,7 @@ es.actions.push(
                 } else {
                     es.caseData.previous = true;
                     es.caseData.loopCount -= 1;
-
+                    es.close();
                 }
             }
         );
@@ -357,14 +357,12 @@ es.actions.push(
             }, cb);
         }
 
-
-
         function C2S_MatchStartRequest(cb) {
 
             monitorRequest({
                 qName: "Match",
                 q: "C2S_MatchStartRequest",
-                r: "S2C_MatchSuccessNotify",
+                r: "S2C_MatchSuccessNotify", //S2C_MatchEnterResponse S2C_MatchSuccessNotify
                 qOpts: {}
             }, cb);
         }
