@@ -4091,4 +4091,50 @@ Error: Illegal value for Message.Field .protocol.S2S_AccountVerifyOkMsg.global_s
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot read property 'player_id' of undefined
     at CreatePlayerBasicInfoRequest (evalmachine.<anonymous>:410:68)
     at timer._onTimeout (timers.js:228:16)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)SyntaxError: Unexpected end of input
+    at Object.parse (native)
+    at IncomingMessage.<anonymous> (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:129:25)
+    at IncomingMessage.emit (events.js:117:20)
+    at _stream_readable.js:944:16
+    at process._tickCallback (node.js:458:13)SyntaxError: Unexpected end of input
+    at Object.parse (native)
+    at IncomingMessage.<anonymous> (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:130:25)
+    at IncomingMessage.emit (events.js:117:20)
+    at _stream_readable.js:944:16
+    at process._tickCallback (node.js:458:13)TypeError: Property 'fn' of object [object Object] is not a function
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:39:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Converting circular structure to JSON
+    at Object.stringify (native)
+    at IncomingMessage.<anonymous> (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:130:36)
+    at IncomingMessage.emit (events.js:117:20)
+    at _stream_readable.js:944:16
+    at process._tickCallback (node.js:458:13)ReferenceError: data is not defined
+    at IncomingMessage.<anonymous> (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:138:32)
+    at IncomingMessage.emit (events.js:117:20)
+    at _stream_readable.js:944:16
+    at process._tickCallback (node.js:458:13)ReferenceError: cb is not defined
+    at null.fn (evalmachine.<anonymous>:59:30)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:38:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: rebot is not defined
+    at null.fn (evalmachine.<anonymous>:49:14)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:39:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'push' of undefined
+    at evalmachine.<anonymous>:93:33
+    at Array.forEach (native)
+    at null.fn (evalmachine.<anonymous>:89:25)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:39:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)TypeError: Cannot call method 'push' of undefined
+    at evalmachine.<anonymous>:94:33
+    at Array.forEach (native)
+    at null.fn (evalmachine.<anonymous>:90:25)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:39:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)ReferenceError: ideaDetail is not defined
+    at null.fn (evalmachine.<anonymous>:88:21)
+    at breath (G:\pomelo_performance\performance-framework\node_modules\dena-client\comsoplat-client\lib\client.js:38:18)
+    at wrapper [as _onTimeout] (timers.js:270:14)
     at Timer.listOnTimeout [as ontimeout] (timers.js:121:15)

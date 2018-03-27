@@ -10,7 +10,6 @@ var RESULT_DIR = "G:/pomelo_performance/performance-framework/result/";
 var Excel_Files = ["M_Items_pool_2220.xlsx", "M_Items_pool_2617.xlsx", "removed_2018.xlsx"];
 var IS_DEBUG = false;
 
-
 function read_excel(fn, index) {
     var _index = index || 0;
     var obj = xlsx.parse(fn);
@@ -133,10 +132,7 @@ function gen_rate() {
 
 function check_removed_player() {
 // tran_data();
-
-// combine_results(RESULT_DIR);
     var dates = read_excel(Excel_Files[0]);
-
     var info0 = gen_info(read_excel(Excel_Files[0]), 1, 2, 4);
     var info1 = gen_info(read_excel(Excel_Files[1]), 1, 2, 4);
     var info2 = Object.keys(gen_json(read_excel(Excel_Files[2]), 0, 1, 2));
@@ -159,7 +155,10 @@ function check_removed_player() {
             console.log(i + " not in info1");
         }
     }
-
 }
 
-check_removed_player();
+function main(){
+    // check_removed_player();
+    combine_results(RESULT_DIR);
+}
+main();
