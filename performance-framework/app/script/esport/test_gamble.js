@@ -11,6 +11,9 @@ var Esport = EsportClient.Esport;
 var Protobuf = EsportClient.Protobuf;
 var path = require('path');
 
+var FNS = ["M_Basic_property.xlsx","M_drop.xlsx","M_Items_pool.xlsx"];
+var EXCELS_DIR= "F:/XLEsports/design/System Value/ForGame/";
+
 var START = 'start';
 var END = 'end';
 
@@ -85,7 +88,7 @@ getEProtoId = function (EProtoStr) {
 
 function read_excel(fn, index){
     var _index = index || 0;
-    var obj = xlsx.parse(path.resolve('') + '\\' + fn);
+    var obj = xlsx.parse(fn);
     var info = {};
     var data = obj[_index].data;
     for (var j in data){
@@ -113,7 +116,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "2", // '1' QA  //2 andPre 9 GQQ
+                        global_server_id: "47", // '1' QA  //2 andPre 9 GQQ
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -150,7 +153,7 @@ es.actions.push(
                         request: {
                             account_id: es.caseData.account,
                             icon_id: 1,
-                            name: es.caseData.account.substr(0, 8),
+                            name: es.caseData.account.substr(1, 9),
                             initial_team_index: 1,
                             channel: "xl"
                         },
@@ -228,8 +231,8 @@ es.actions.push(
                 [
                     C2S_GetShopInfoRequest,
                     C2S_AddItem_11002,
-                    C2S_RotateDishRequest,
-                    // C2S_GambleRequest,
+                    // C2S_RotateDishRequest,
+                    C2S_GambleRequest,
                     // EnterInstanceRequest
 
                 ];
@@ -260,7 +263,7 @@ es.actions.push(
                 rName: "Player",
                 r: "S2C_UpdateResources",
                 qOpts: {
-                    item_id: 11002,  // 11002  11003 俱乐部经验
+                    item_id: 11002,  // 11010 极品签约函 11002  11003 俱乐部经验
                     item_count: 2000
                 },
                 // isMonitor: false
@@ -344,8 +347,8 @@ es.actions.push(
             monitor(START, 'C2S_GambleRequest', '1');
             es.request(getEProtoId('C2S_GambleRequest_ID'),
                 Protobuf['Gamble']['C2S_GambleRequest'].encode({
-                    gamble_type: 1,
-                    is_ten_times: false
+                    gamble_type: 13,  //51-57  2 极品签约函
+                    is_ten_times: true
                 }),
                 getEProtoId('S2C_GamebleResult_ID'),
                 function (message) {
@@ -356,6 +359,9 @@ es.actions.push(
                     data.items.forEach(function (e) {
                         es.log('e: ' + e.item_id);
                         var k = e.item_id;
+                        if ( Number(k) in [Number(1188),Number(1161),Number(1165)] ){
+                            console.log("%s Got 1165: %s",es.caseData.account,k)
+                        }
                         es.caseData.gambles[k] = (k in es.caseData.gambles) ? (es.caseData.gambles[k] + 1) : 1;
                     });
                     es.unregister(getEProtoId('S2C_GamebleResult_ID'));
@@ -366,8 +372,7 @@ es.actions.push(
     },
 
     function () {
-        var fn = "M_Basic_property.xlsx";
-        var info = read_excel(fn);
+        var info = read_excel(EXCELS_DIR + FNS[0]);
         es.log(JSON.stringify(info));
         var total = 0;
         var pos_count = {
@@ -381,7 +386,7 @@ es.actions.push(
             "S+": 0,
             "S": 0,
             "A": 0
-        };
+        }; //1188 Gogoing 866
         var data = [];
         var file = path.resolve('') + '/result/' + es.caseData.account + '.xlsx';
         es.log('Filename: ' + file);
@@ -405,7 +410,10 @@ es.actions.push(
         for (var q  in qos_count) {
             data.push([q, qos_count[q]]);
         }
-
+        // for (var q  in es.caseData.gambles) {
+        //     data.push([q, es.caseData.gambles[q]]);
+        // }
+        //
         data.push(['total', total]);
         var buffer = xlsx.build([{name: es.caseData.account, data: data}]);
         fs.writeFile(file, buffer, 'binary', {flag: 'a+'});

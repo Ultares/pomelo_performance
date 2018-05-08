@@ -177,7 +177,7 @@ es.actions.push(
                     request: {
                         account: es.caseData.account,
                         platform_id: 'xl',
-                        global_server_id: "1", // '1' QA  6
+                        global_server_id: "47", // '1' QA  6
                         game_id: '1',
                         platform_session: 'zzzzzzzz',
                         gameRegion: "1area",
@@ -247,71 +247,71 @@ es.actions.push(
         }, es.randomIntTime());
     },
 
-    function () {
-        if (!es.caseData.previous) {
-            return 1;
-        }
-        es.caseData.previous = false;
-        setTimeout(function () {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateBasicInfo",
-                qOpts: {
-                    item_id: 11003,  // 俱乐部经验
-                    item_count: 16666
-                },
-                isMonitor: false
-            },function(){
-                es.caseData.previous = true;
-            });
-        }, es.randomIntTime());
-    },
-
-    function () {
-        if (!es.caseData.previous) {
-            return 1;
-        }
-        es.caseData.previous = false;
-        setTimeout(function () {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11005,  // 体力
-                    item_count: 9999
-                },
-                isMonitor: false
-            },function(){
-                es.caseData.previous = true;
-            });
-        }, es.randomIntTime());
-    },
-
-    function () {
-        if (!es.caseData.previous) {
-            return 1;
-        }
-        es.caseData.previous = false;
-        setTimeout(function () {
-            monitorRequest({
-                qName: "Item",
-                q: "C2S_AddItem",
-                rName: "Player",
-                r: "S2C_UpdateResources",
-                qOpts: {
-                    item_id: 11002,  // 钻石
-                    item_count: 9999999
-                },
-                isMonitor: false
-            },function(){
-                es.caseData.previous = true;
-            });
-        }, es.randomIntTime());
-    },
+    // function () {
+    //     if (!es.caseData.previous) {
+    //         return 1;
+    //     }
+    //     es.caseData.previous = false;
+    //     setTimeout(function () {
+    //         monitorRequest({
+    //             qName: "Item",
+    //             q: "C2S_AddItem",
+    //             rName: "Player",
+    //             r: "S2C_UpdateBasicInfo",
+    //             qOpts: {
+    //                 item_id: 11003,  // 俱乐部经验
+    //                 item_count: 16666
+    //             },
+    //             isMonitor: false
+    //         },function(){
+    //             es.caseData.previous = true;
+    //         });
+    //     }, es.randomIntTime());
+    // },
+    //
+    // function () {
+    //     if (!es.caseData.previous) {
+    //         return 1;
+    //     }
+    //     es.caseData.previous = false;
+    //     setTimeout(function () {
+    //         monitorRequest({
+    //             qName: "Item",
+    //             q: "C2S_AddItem",
+    //             rName: "Player",
+    //             r: "S2C_UpdateResources",
+    //             qOpts: {
+    //                 item_id: 11005,  // 体力
+    //                 item_count: 9999
+    //             },
+    //             isMonitor: false
+    //         },function(){
+    //             es.caseData.previous = true;
+    //         });
+    //     }, es.randomIntTime());
+    // },
+    //
+    // function () {
+    //     if (!es.caseData.previous) {
+    //         return 1;
+    //     }
+    //     es.caseData.previous = false;
+    //     setTimeout(function () {
+    //         monitorRequest({
+    //             qName: "Item",
+    //             q: "C2S_AddItem",
+    //             rName: "Player",
+    //             r: "S2C_UpdateResources",
+    //             qOpts: {
+    //                 item_id: 11002,  // 钻石
+    //                 item_count: 9999999
+    //             },
+    //             isMonitor: false
+    //         },function(){
+    //             es.caseData.previous = true;
+    //         });
+    //     }, es.randomIntTime());
+    // },
 
     function () {
         if (!es.caseData.previous) {
@@ -396,17 +396,17 @@ es.actions.push(
                 [
 
                     C2S_EchoGameS,
-                    // C2S_GetBagInfoRequest,
-                    // C2S_SkillInfoRequest,
-                    // C2S_GetTalentInfoRequest,
-                    // C2S_GetHeroPoolInfo,
-                    // C2S_GetCardInfoTeamsRequest,
-                    // C2S_GetResoucesRequest,
+                    C2S_GetBagInfoRequest,
+                    C2S_SkillInfoRequest,
+                    C2S_GetTalentInfoRequest,
+                    C2S_GetHeroPoolInfo,
+                    C2S_GetCardInfoTeamsRequest,
+                    C2S_GetResoucesRequest,
                     C2S_ChatInfoRequest,
-                    // C2S_MailInfoRequest,
-                    // C2S_TaskInfoRequest,
+                    C2S_MailInfoRequest,
+                    C2S_TaskInfoRequest,
                     // C2S_GetInstanceRequest,
-                    // C2S_GetShopInfoRequest,
+                    C2S_GetShopInfoRequest,
                     // C2S_SkipBattleRequest,
                     // C2S_LeaveBattle_Star,
                     // C2S_GloryOpenChquest,
@@ -416,13 +416,13 @@ es.actions.push(
                     // C2S_SkipBattleRequest,
                     // C2S_LeaveBattle_Instance,
                     // C2S_GetCardInfoRequest,
-                    // C2S_RecruitInfoRequest,
+                    C2S_RecruitInfoRequest,
                     // C2S_EchoGameS,
                     // C2S_TeamPropertyRequest,
-                    // C2S_GetCardInfoPositionsRequest,
+                    C2S_GetCardInfoPositionsRequest,
                     // C2S_GloryInfoRequest,
                     // C2S_GambleRequest,
-                    C2S_ChatRequest
+                    // C2S_ChatRequest
                 ];
         }
         es.funcArray.forEach(function (element, index, array) {
@@ -648,6 +648,16 @@ es.actions.push(
                 qOpts: {}
             }, cb);
         }
+
+        function C2S_GuildInfoRequest(cb) {
+            monitorRequest({
+                qName: "Guild",
+                q: "C2S_GuildInfoRequest",
+                r: "S2C_GuildInfoResponse",
+                qOpts: {}
+            }, cb);
+        }
+
 
         function C2S_RecruitInfoRequest(cb) {
             monitorRequest({
